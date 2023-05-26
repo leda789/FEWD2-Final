@@ -1,0 +1,52 @@
+:root {
+  --lineHeight: calc(1em + .5em);
+  --blueDk: #33658A;
+  --blueLt: #86BBD8;
+}
+body {
+  font: 16px sans-serif;
+}
+/*generic styling*/
+blockquote {
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  padding: 1em .5em;
+}
+blockquote::after {
+  position: absolute;
+  background-color: rgba(0,0,0,.15);
+  height: 100%;
+  inset: 0;
+  content: '';
+}
+button {
+  cursor: pointer;
+  background-color: white;
+  border: solid 2px black;
+  padding: .5em 1em;
+  border-radius: 1em;
+}
+button.blue {
+  border-color: var(--blueDk);
+  background-color: var(--blueLt);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
+}
+
+/*text-transform classes*/
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+@media print {
+  .dontPrint {
+    visibility: hidden;
+  }
+}
