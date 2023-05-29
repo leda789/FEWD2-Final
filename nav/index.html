@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style/main.css">
+    <script src="script/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="navData">
+                <a href="#" class="navLogo">
+                    <i class="fa-solid fa-bone"></i>Logo
+                </a>
+                <div class="navToggle" id="navToggle">
+                    <i class="fa-solid fa-bars menuIcon"></i>
+                    <i class="fa-solid fa-xmark closeIcon"></i>
+                </div>
+            </div>             
+            <!-- Menu -->
+            <div class="navMenu" id="navMenu">
+                <ul class="navList">
+                    <li>
+                        <a href="#" class="navLink">Menu1</a>
+                    </li>
+                    <li class="dropdownItem">
+                       <div class="navLink dropdownIcon">
+                        Menu2<i class="fa-solid fa-caret-down arrowIcon"></i>
+                       </div> 
+                       <div class="dropdownContent">
+                                <div class="dropdownItems">
+                                    <ul class="dropdownList">
+                                        <li>
+                                            <a href="#" class="dropdownLink">Submenu1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdownLink">Submenu2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdownLink">Submenu3</a>
+                                        </li>
+                                    </ul>
+                                
+                                </div>
+                        </div>        
+                       
+                    </li>
+                    <li>
+                        <a href="#" class="navLink">Menu3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navLink">Menu4</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navLink">Menu5</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    
+</body>
+</html>
