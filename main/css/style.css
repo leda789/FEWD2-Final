@@ -15,6 +15,7 @@
 body {
   font: 16px sans-serif;
 }
+
 /*generic styling*/
 abbr {
   text-decoration: underline dotted;
@@ -46,10 +47,12 @@ code {
 h1, h2, h3, h4, h5, h6 {
   font-family: serif;
 }
+
 /*list styling classes*/
 .listNoStyle {
   list-style: none;
 }
+
 /*colors*/
 .red {
   border-color: var(--redDk);  
@@ -71,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--blueDk);
   background-color: var(--blueLt);
 }
+
 /*text alignment classes*/
 .textRight {
   text-align: right;
@@ -84,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 .textJustify {
   text-align: justify;
 }
+
 /*text-transform classes*/
 .uppercase {
   text-transform: uppercase;
