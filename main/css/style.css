@@ -16,6 +16,12 @@ body {
   font: 16px sans-serif;
 }
 /*generic styling*/
+abbr {
+  text-decoration: underline dotted;
+}
+address {
+  font-style: normal;
+}
 blockquote {
   text-align: center;
   font-style: italic;
@@ -36,8 +42,15 @@ button {
   padding: .5em 1em;
   border-radius: 1em;
 }
+cite {
+  font-style: italic;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: serif;
+}
+/*list styling classes*/
+.listNoStyle {
+  list-style: none;
 }
 /*colors*/
 .red {
@@ -59,6 +72,19 @@ h1, h2, h3, h4, h5, h6 {
 .blue {
   border-color: var(--blueDk);
   background-color: var(--blueLt);
+}
+/*text alignment classes*/
+.textRight {
+  text-align: right;
+}
+.textCenter {
+  text-align: center;
+}
+.textLeft {
+  text-align: left;
+}
+.textJustify {
+  text-align: justify;
 }
 /*text-transform classes*/
 .uppercase {
