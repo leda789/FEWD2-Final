@@ -18,7 +18,15 @@ dropdownItem.forEach((item) => {
     const dropdownButton = item.querySelector('.dropdownIcon')
 
     dropdownButton.addEventListener('click', () => {
+
+        const showDropdown = document.querySelector('.showDropdown')
+
         toggleItem(item)
+
+        if(showDropdown && showDropdown!= item) {
+            toggleItem(showDropdown)
+        }
+
        
     })
 
