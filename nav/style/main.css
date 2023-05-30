@@ -107,7 +107,8 @@ a{text-decoration: none;}
 .dropdownLink{
   color:#333;
   transition: color .3s;
-
+  padding:.5rem 7rem;
+  margin:1rem 0;
 }
 .dropdownLink:hover{
   color: #fff;
