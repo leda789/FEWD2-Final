@@ -118,3 +118,16 @@ a{text-decoration: none;}
   transform: rotate(180deg);
 }
 
+ /*========Media query========*/
+ @media screen and (min-width: 576px) {
+  .nav{
+    height: 4rem;
+    display:flex;
+    justify-content: space-between;
+   
+  }
+  .navToggle{
+    display:none;
+  }
+  
+}
