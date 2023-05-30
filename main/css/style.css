@@ -27,13 +27,7 @@ blockquote {
   font-style: italic;
   position: relative;
   padding: 1em .5em;
-}
-blockquote::after {
-  position: absolute;
   background-color: rgba(0,0,0,.15);
-  height: 100%;
-  inset: 0;
-  content: '';
 }
 button {
   cursor: pointer;
@@ -44,6 +38,10 @@ button {
 }
 cite {
   font-style: italic;
+}
+code {
+  font-family: monospace;
+  background-color: rgba(0,0,0,.15);
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: serif;
