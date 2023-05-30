@@ -1,7 +1,16 @@
 :root {
   --lineHeight: calc(1em + .5em);
-  --blueDk: #33658A;
-  --blueLt: #86BBD8;
+  
+  --redLt: #F98280;
+  --redDk: #B40B08;
+  --orangeLt: #EA7600;
+  --orangeDk: #8A4500;
+  --yellowLt: #EBBF21;
+  --yellowDk: #695611;
+  --greenLt: #84DB85;
+  --greenDk: #1D631F;
+  --blueLt: #86BBD8;  
+  --blueDk: #2F5C7F;
 }
 body {
   font: 16px sans-serif;
@@ -27,14 +36,30 @@ button {
   padding: .5em 1em;
   border-radius: 1em;
 }
-button.blue {
-  border-color: var(--blueDk);
-  background-color: var(--blueLt);
-}
 h1, h2, h3, h4, h5, h6 {
   font-family: serif;
 }
-
+/*colors*/
+.red {
+  border-color: var(--redDk);  
+  background-color: var(--redLt);
+}
+.orange {
+  border-color: var(--orangeDk);
+  background-color: var(--orangeLt);
+}
+.yellow {
+  border-color: var(--yellowDk);
+  background-color: var(--yellowLt);
+}
+.green {
+  border-color: var(--greenDk);
+  background-color: var(--greenLt);
+}
+.blue {
+  border-color: var(--blueDk);
+  background-color: var(--blueLt);
+}
 /*text-transform classes*/
 .uppercase {
   text-transform: uppercase;
