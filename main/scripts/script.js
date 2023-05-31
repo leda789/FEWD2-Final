@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> be7747364244869ff41b9c96b0f7fb7735be963b
 /* Nav */
 
 const showMenu = (toggleId, navId) => {
@@ -51,7 +54,11 @@ const orderBtn = document.querySelector('.button');
 const returnMessage = document.querySelector('.return');
 
 returnMessage.style.display ='none';
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> be7747364244869ff41b9c96b0f7fb7735be963b
 /************
  * CAROUSEL *
  ************/
@@ -160,5 +167,9 @@ dotsNav.addEventListener('click', e => {
   updateDots(targetDot);
   hideShowArrows(targetIndex);
   pauseCarousel();
+<<<<<<< HEAD
 })
 >>>>>>> upstream/main
+=======
+})
+>>>>>>> be7747364244869ff41b9c96b0f7fb7735be963b

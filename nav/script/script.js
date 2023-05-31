@@ -44,7 +44,7 @@ const toggleItem = (item) => {
 
 
 /* order */
-const orderBtn = document.querySelector('.button');
-const returnMessage = document.querySelector('.return');
+// const orderBtn = document.querySelector('.button');
+// const returnMessage = document.querySelector('.return');
 
-returnMessage.style.display ='none';
+// returnMessage.style.display ='none';

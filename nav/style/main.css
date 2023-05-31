@@ -121,7 +121,9 @@ a{text-decoration: none;}
     display:flex;
     justify-content: space-between;
   }
-  
+   .navMenu{
+    opacity:1;
+   }
 
 }
   
