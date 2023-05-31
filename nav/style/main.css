@@ -124,6 +124,8 @@ a{text-decoration: none;}
    .navMenu{
     opacity:1;
    }
-
+   .navToggle{
+    display: none;
+   }
 }
   
