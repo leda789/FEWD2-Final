@@ -1,4 +1,51 @@
+:root {
+  --lineHeight: calc(1em + .5em);
+  
+  --redLt: #F98280;
+  --redDk: #B40B08;
+  --orangeLt: #EA7600;
+  --orangeDk: #8A4500;
+  --yellowLt: #EBBF21;
+  --yellowDk: #695611;
+  --greenLt: #84DB85;
+  --greenDk: #1D631F;
+  --blueLt: #86BBD8;  
+  --blueDk: #2F5C7F;
+}
+body {
+  font: 16px sans-serif;
+}
 
+/*generic styling*/
+abbr {
+  text-decoration: underline dotted;
+}
+address {
+  font-style: normal;
+}
+blockquote {
+  text-align: center;
+  font-style: italic;
+  padding: 1em .5em;
+  background-color: rgba(0,0,0,.15);
+}
+button {
+  cursor: pointer;
+  background-color: white;
+  border: solid 2px black;
+  padding: .5em 1em;
+  border-radius: 1em;
+}
+cite {
+  font-style: italic;
+}
+code {
+  font-family: monospace;
+  background-color: rgba(0,0,0,.15);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
+}
 
 /*========Header===========*/
 .header{
@@ -114,6 +161,126 @@
       display:flex;
       justify-content: space-between;
     }
-    
-  
+
+/*list styling classes*/
+.listNoStyle {
+  list-style: none;
+}
+
+/*colors*/
+.red {
+  border-color: var(--redDk);  
+  background-color: var(--redLt);
+}
+.orange {
+  border-color: var(--orangeDk);
+  background-color: var(--orangeLt);
+}
+.yellow {
+  border-color: var(--yellowDk);
+  background-color: var(--yellowLt);
+}
+.green {
+  border-color: var(--greenDk);
+  background-color: var(--greenLt);
+}
+.blue {
+  border-color: var(--blueDk);
+  background-color: var(--blueLt);
+}
+
+/* carousel classes
+*with 'n' amount of slides
+*coursel formatting: section.carousel>button.carouselBtnLeft+(div.carouselContainer>ul.carouselItems>li.carouselSlide*n)
+*                    +button.carouselBtnRight+nav.carouselNav>button.carouselIndicator*n
+*put font awesome icons inside carousel right and left buttons
+*height needs to be specified on .carousel, otherwise everything collapses
+*/
+.carousel {
+    max-width: calc(100% - 80px);
+    margin: 0 auto;
+    position: relative;
+}
+.carouselContainer {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.carouselItems {
+    list-style-type: none;
+    height: 100%;
+    position: relative;
+    transition: transform .5s ease-in-out;
+}
+.carouselSlide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.1);
+}
+.carouselLeftBtn, .carouselRightBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: rgb(150,150,150);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.carouselLeftBtn { left: -40px; }
+.carouselRightBtn { right: -40px; }
+.carouselNav {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    position: relative;
+    bottom: 0;
+}
+.carouselIndicator {
+    background-color: rgb(150,150,150);
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+.carouselIndicator.currentSlide {
+  background-color: rgba(0,0,0,.15);
+}
+.isHidden {
+  display: none;
+}
+
+/*text alignment classes*/
+.textRight {
+  text-align: right;
+}
+.textCenter {
+  text-align: center;
+}
+.textLeft {
+  text-align: left;
+}
+.textJustify {
+  text-align: justify;
+}
+
+/*text-transform classes*/
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+@media print {
+  .dontPrint {
+    visibility: hidden;
   }
+}
