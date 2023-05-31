@@ -107,4 +107,13 @@
    align-items: center;
  }
  .showDropdown .arrowIcon{transform: rotate(180deg);}
- 
+  /*========Media query  nav========*/
+  @media screen and (min-width: 576px) {
+    .nav{
+      height:5rem;
+      display:flex;
+      justify-content: space-between;
+    }
+    
+  
+  }
