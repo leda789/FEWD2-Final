@@ -25,9 +25,7 @@ dropdownItem.forEach((item) => {
 
         if(showDropdown && showDropdown!= item) {
             toggleItem(showDropdown)
-        }
-
-       
+        }  
     })
 
 })
@@ -41,7 +39,12 @@ const toggleItem = (item) => {
     } else {
         dropdownContent.style.height = dropdownContent.scrollHeight + 'px'
         item.classList.add('showDropdown')
-    }
-
-    
+    } 
 }
+
+
+/* order */
+const orderBtn = document.querySelector('.button');
+const returnMessage = document.querySelector('.return');
+
+returnMessage.style.display ='none';
