@@ -58,7 +58,8 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 100; 
  }
   /*========Nav========*/
-  .nav{height: 4rem;
+  .nav {
+   height: 4rem;
    margin-inline: 1.5rem;
  }
   .navData {
@@ -98,13 +99,13 @@ h1, h2, h3, h4, h5, h6 {
     top: 3rem;
     width: 50%;
     background-color: #333;
-    height: 100vh-3rem;
+    height: 100vh-3rem; /*you mean calc(100vh - 3rem) ?*/
     overflow: auto;
     padding-block: 1.5rem 3.5rem;
     pointer-events: none;
     align-items: center;
     opacity: 0;
-    transition: top .4s, opasity .3s;
+    transition: top .4s, opasity .3s; /*you mean opacity ?*/
   }
   .navLink{
     color:#fff;
@@ -143,10 +144,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0.5rem 0;
  }
  .dropdownLink{
-   color:#333;
+   color: #333;
    transition: color .3s;
    padding:.5rem 7rem;
-   margin:1rem 0;
+   margin: 1rem 0;
  }
  .dropdownLink:hover{
    color: #fff;
@@ -157,11 +158,100 @@ h1, h2, h3, h4, h5, h6 {
   /*========Media query  nav========*/
   @media screen and (min-width: 576px) {
     .nav{
-      height:5rem;
-      display:flex;
+      height: 5rem;
+      display: flex;
       justify-content: space-between;
     }
+}
+/*To use the grid you need to add a container element. Inside the container, you can add rows to organize your columns. Use col-1 through col-12 to determine the width of the column
 
+<div class="container">
+   <div class="row">
+     <div class="col-6">Column 1</div>
+     <div class="col-3">Column 2</div>
+     <div class="col-3">Column 3</div>
+     <div class="col-4">Column 4</div>
+     <div class="col-4">Column 5</div>
+     <div class="col-4">Column 6</div>
+     <div class="col-2">Column 7</div>
+     <div class="col-5">Column 8</div>
+     <div class="col-5">Column 9</div>
+     <div class="col-3">Column 10</div>
+     <div class="col-3">Column 11</div>
+     <div class="col-3">Column 12</div>
+   </div>
+ </div>*/
+   
+      
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  [class^="col-"] {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: salmon;
+    border-color: blue;
+    border-style: solid;
+  }
+  .col-6 { width: 50%; }
+  .col-4 { width: 33.33%; }
+  .col-3 { width: 25%; }
+  .col-2 { width: 16.67%; }
+  .col-5 { width: 41.67%; }
+  
+  /* Media Queries */
+  @media only screen and (max-width: 767px) {
+    /* Mobile Portrait */
+    .col-6,
+    .col-4,
+    .col-3,
+    .col-2,
+    .col-5 {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Tablet */
+    .col-6 {
+      width: 50%;
+    }
+    .col-4,
+    .col-5 {
+      width: 50%;
+    }
+    .col-3,
+    .col-2 {
+      width: 50%;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Mobile Landscape */
+    .col-6,
+    .col-4,
+    .col-3,
+    .col-2,
+    .col-5 {
+      width: 50%;
+    }
+  }
+  
+  /* Desktop */
+  @media only screen and (min-width: 1200px) {
+    .col-6 { width: 50%; }
+    .col-4 { width: 33.33%; }
+    .col-3 { width: 25%; }
+    .col-2 { width: 16.67%; }
+    .col-5 { width: 41.67%; }
+  }
+    
 /*list styling classes*/
 .listNoStyle {
   list-style: none;
