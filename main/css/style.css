@@ -53,13 +53,13 @@
     top: 3rem;
     width: 50%;
     background-color: #333;
-    height: 100vh-3rem;
+    height: calc(100vh-3rem);
     overflow: auto;
     padding-block: 1.5rem 3.5rem;
     pointer-events: none;
     align-items: center;
     opacity: 0;
-    transition: top .4s, opasity .3s;
+    transition: top .4s, opacity .3s;
   }
   .navLink{
     color:#fff;
