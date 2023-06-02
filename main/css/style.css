@@ -148,7 +148,12 @@ h1,h3{
       display:flex;
       justify-content: space-between;
     }
-    
+    .navMenu{
+      opacity:1;
+     }
+     .navToggle{
+      display: none;
+     }
   
   }
 =======
