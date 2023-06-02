@@ -80,7 +80,7 @@ a{text-decoration: none;}
    pointer-events: initial;
  }
  .showIcon .menuIcon{
-   opacity: 0;
+   display:none;
    transform: rotate(90deg);
  }
  .showIcon .closeIcon{
