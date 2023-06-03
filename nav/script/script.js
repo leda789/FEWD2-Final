@@ -1,47 +1,19 @@
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-          nav   = document.getElementById(navId)
+const menuBtn = document.querySelector('.navbar .menuIcon');
+const closeBtn = document.querySelector('.navLinks .closeIcon')
+const navLinks = document.querySelector('.navLinks')
 
-    toggle.addEventListener('click', () => {
+menuBtn.addEventListener('click',() =>{
+    navLinks.style.left = '0';
 
-        nav.classList.toggle('showMenu')
-
-        toggle.classList.toggle('showIcon')
-    })
-}
-
-showMenu('navToggle','navMenu');
-
-const dropdownItem = document.querySelectorAll('.dropdownItem')
-
-dropdownItem.forEach((item) => {
-    const dropdownButton = item.querySelector('.dropdownIcon')
-
-    dropdownButton.addEventListener('click', () => {
-
-        const showDropdown = document.querySelector('.showDropdown')
-
-        toggleItem(item)
-
-        if(showDropdown && showDropdown!= item) {
-            toggleItem(showDropdown)
-        }  
-    })
-
+});
+closeBtn.addEventListener('click',() => {
+    navLinks.style.left = '-100%';
 })
 
-const toggleItem = (item) => {
-    const dropdownContent = item.querySelector('.dropdownContent')
-
-    if(item.classList.contains('showDropdown')){
-        dropdownContent.removeAttribute('style')
-        item.classList.remove('showDropdown')
-    } else {
-        dropdownContent.style.height = dropdownContent.scrollHeight + 'px'
-        item.classList.add('showDropdown')
-    } 
-}
-
+const submenuIcon = document.querySelector('.arrowIcon');
+submenuIcon.addEventListener('click', () =>{
+    navLinks.classList.toggle('show1');
+})
 
 /* order */
 // const orderBtn = document.querySelector('.button');
