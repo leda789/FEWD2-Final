@@ -39,7 +39,7 @@ button {
 cite {
   font-style: italic;
 }
-code {
+code, samp {
   font-family: monospace;
   background-color: rgba(0,0,0,.15);
 }
