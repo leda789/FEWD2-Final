@@ -344,6 +344,73 @@ h1, h2, h3, h4, h5, h6 {
 .isHidden {
   display: none;
 }
+/*food icons*/
+@font-face {
+  font-family: 'foodIcons';
+  src:  url('icons/foodIcons.eot?dzfose');
+  src:  url('icons/foodIcons.eot?dzfose#iefix') format('embedded-opentype'),
+    url('icons/foodIcons.ttf?dzfose') format('truetype'),
+    url('icons/foodIcons.woff?dzfose') format('woff'),
+    url('icons/foodIcons.svg?dzfose#foodIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'foodIcons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering  */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconDairy:before {
+  content: "\e900";
+}
+.iconDairyFree:before {
+  content: "\e901";
+}
+.iconEgg:before {
+  content: "\e902";
+}
+.iconEggFree:before {
+  content: "\e903";
+}
+.iconFavorite:before {
+  content: "\1f31f";
+}
+.iconFish:before {
+  content: "\1f41f";
+}
+.iconGluten:before {
+  content: "\1f35e";
+}
+.iconGlutenFree:before {
+  content: "\e907";
+}
+.iconNut:before {
+  content: "\e905";
+}
+.iconNutFree:before {
+  content: "\e909";
+}
+.iconShellfish:before {
+  content: "\1f980";
+}
+.iconSpicy:before {
+  content: "\1f336";
+}
+.iconVeggie:before {
+  content: "\1f33f";
+}
 
 /*text alignment classes*/
 .textRight {
