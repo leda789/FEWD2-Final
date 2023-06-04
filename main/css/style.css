@@ -43,6 +43,9 @@ code, samp {
   font-family: monospace;
   background-color: rgba(0,0,0,.15);
 }
+dt {
+  font-weight: bold;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: serif;
 }
@@ -410,6 +413,32 @@ i {
 }
 .iconVeggie:before {
   content: "\1f33f";
+}
+
+/*helper classes*/
+.floatLeft {
+  float: left
+}
+.floatRight {
+  float: right;
+}
+.floarClear {
+  clear: both;
+}
+.inlineBlock, .inlineBlockCenter {
+  display: inline-block;
+}
+.inlineBlockCenter  {
+  margin: inherit auto;
+}
+.transition, .transitionFast, .transitionSlow {
+  transition: all .5s;
+}
+.transitionFast {
+  transition-duration: .2s;
+}
+.transitionSlow {
+  transition-duration: 1s;
 }
 
 /*text alignment classes*/
