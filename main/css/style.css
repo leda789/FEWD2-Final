@@ -171,10 +171,6 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     display: flex;
     flex-wrap: wrap;
-  }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
   }
   /*for mobile devices*/
@@ -332,6 +328,9 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.iconVegan:before {
+  content: "\e904";
+}
 .iconDairy:before {
   content: "\e900";
 }
