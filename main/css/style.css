@@ -39,9 +39,12 @@ button {
 cite {
   font-style: italic;
 }
-code {
+code, samp {
   font-family: monospace;
   background-color: rgba(0,0,0,.15);
+}
+dt {
+  font-weight: bold;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: serif;
@@ -163,25 +166,7 @@ h1, h2, h3, h4, h5, h6 {
       justify-content: space-between;
     }
 }
-/*To use the grid you need to add a container element. Inside the container, you can add rows to organize your columns. Use col-1 through col-12 to determine the width of the column
-
-<div class="container">
-   <div class="row">
-     <div class="col-6">Column 1</div>
-     <div class="col-3">Column 2</div>
-     <div class="col-3">Column 3</div>
-     <div class="col-4">Column 4</div>
-     <div class="col-4">Column 5</div>
-     <div class="col-4">Column 6</div>
-     <div class="col-2">Column 7</div>
-     <div class="col-5">Column 8</div>
-     <div class="col-5">Column 9</div>
-     <div class="col-3">Column 10</div>
-     <div class="col-3">Column 11</div>
-     <div class="col-3">Column 12</div>
-   </div>
- </div>*/
-   
+/*To use the grid you need to add a container element. Inside the container, you can add rows to organize your columns. Use col-1 through col-12 to determine the width of the column*/
       
   .container {
     display: flex;
@@ -192,64 +177,39 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     width: 100%;
   }
+  /*for mobile devices*/
   [class^="col-"] {
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: salmon;
-    border-color: blue;
-    border-style: solid;
+    width: 100%;
   }
-  .col-6 { width: 50%; }
-  .col-4 { width: 33.33%; }
-  .col-3 { width: 25%; }
-  .col-2 { width: 16.67%; }
-  .col-5 { width: 41.67%; }
-  
+
   /* Media Queries */
-  @media only screen and (max-width: 767px) {
-    /* Mobile Portrait */
-    .col-6,
-    .col-4,
-    .col-3,
-    .col-2,
-    .col-5 {
-      width: 100%;
-    }
+
+  @media only screen and (min-width: 600px) {
+  /* mobile landscape */
+    [class^="col-"] { width: 50%; }
+    .col-12 { width: 100%; }
   }
   
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* Tablet */
-    .col-6 {
-      width: 50%;
-    }
-    .col-4,
-    .col-5 {
-      width: 50%;
-    }
-    .col-3,
-    .col-2 {
-      width: 50%;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    /* Mobile Landscape */
-    .col-6,
-    .col-4,
-    .col-3,
-    .col-2,
-    .col-5 {
-      width: 50%;
-    }
+  @media only screen and (min-width: 984px) {
+  /* tablets */
+    [class^="col-"] { width: 33.33%; }
+    .col-12 { width: 100%; }
   }
   
   /* Desktop */
   @media only screen and (min-width: 1200px) {
+    .col-12{ width: 100%; }
+    .col-11{ width: 91.66%; }
+    .col-10{ width: 83.33%; }
+    .col-9 { width: 75%; }
+    .col-8 { width: 66.66%; }
+    .col-7 { width: 58.33%; }
     .col-6 { width: 50%; }
+    .col-5 { width: 41.66%; }
     .col-4 { width: 33.33%; }
     .col-3 { width: 25%; }
-    .col-2 { width: 16.67%; }
-    .col-5 { width: 41.67%; }
+    .col-2 { width: 16.66%; }
+    .col-1 { width: 8.33%; }
   }
     
 /*list styling classes*/
@@ -410,6 +370,32 @@ i {
 }
 .iconVeggie:before {
   content: "\1f33f";
+}
+
+/*helper classes*/
+.floatLeft {
+  float: left
+}
+.floatRight {
+  float: right;
+}
+.floarClear {
+  clear: both;
+}
+.inlineBlock, .inlineBlockCenter {
+  display: inline-block;
+}
+.inlineBlockCenter  {
+  margin: inherit auto;
+}
+.transition, .transitionFast, .transitionSlow {
+  transition: all .5s;
+}
+.transitionFast {
+  transition-duration: .2s;
+}
+.transitionSlow {
+  transition-duration: 1s;
 }
 
 /*text alignment classes*/
