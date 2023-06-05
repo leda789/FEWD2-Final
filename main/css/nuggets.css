@@ -333,10 +333,10 @@ h1, h2, h3, h4, h5, h6 {
 /*cards*/
 .card {
   border-radius: 1rem;
-  border: solid 1px white;
   position: relative;
   color: var(--primaryDk);
   padding: 1em;
+  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.15);
 }
 
 .card p {
@@ -345,11 +345,12 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: 0;
   border-radius: 0 0 1rem 1rem;
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba(255,255,255,.5);
   padding: .5rem 1rem;
 }
 .card i {
   position: absolute;
+  padding: .5rem 1rem;
   right: 0;
   bottom: 0;
 }
