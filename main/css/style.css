@@ -80,7 +80,7 @@ nav .navbar .navLinks .links li:hover .subMenu{display: block;}
 .navLinks .sidebarLogo .logoName,
 .navLinks .sidebarLogo .closeIcon{display: none;}
 
-  /*========Media query========*/
+  /*========Media query NAV========*/
   @media screen and (max-width: 576px) {
    .navbar .menuIcon{
       display: block;
@@ -183,12 +183,12 @@ h1,h3{
   border: .1rem solid #333;
   padding: 1.5rem;
   margin: 0 auto;
+
 }
 
 .order form .inputBox{
   display: flex;
   flex-direction: column;
-  
   justify-content: space-between;
 }
 .order form .inputBox .inputs {
@@ -198,11 +198,47 @@ h1,h3{
 }
 .order form .inputBox .inputs input,
 .order form .inputBox .inputs textarea{
-  background-color: #555;
+  background-color: #aaa;
   border-radius: .17rem;
   color:#fff;
 }
+.return{
+  display:grid;
+  place-items:center;
+  position: relative;
+  color:#fff;
+  border: solid 2px #333;
+  border-radius: .25rem;
+  box-shadow: 0 4px 6px #555;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  background-color: #555;
+  align-items: center;
 
+}
+.button{
+  cursor: pointer;
+  margin:  1rem 45%;
+  border: 2px solid #333;
+  border-radius: 4px;
+}
+
+/*========Media query ORDER========*/
+@media screen and (min-width: 767px) {
+  
+  .order form .inputBox{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap:1%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .order form{
+  max-width: 900px;
+  }
+}
   /*========Media query  nav========*/
   @media screen and (min-width: 576px) {
     .nav{display:grid;}
