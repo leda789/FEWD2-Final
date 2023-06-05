@@ -330,6 +330,24 @@ h1, h2, h3, h4, h5, h6 {
 .isHidden {
   display: none;
 }
+/*cards*/
+.card {
+  border-radius: 1rem;
+  border: solid 1px white;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+}
+.card p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.15);
+  border-radius: 0 0 1rem 1rem;
+}
+
 /*food icons*/
 @font-face {
   font-family: 'foodIcons';
