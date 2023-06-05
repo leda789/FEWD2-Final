@@ -355,9 +355,12 @@ button {
 cite {
   font-style: italic;
 }
-code {
+code, samp {
   font-family: monospace;
   background-color: rgba(0,0,0,.15);
+}
+dt {
+  font-weight: bold;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: serif;
@@ -374,7 +377,8 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 100; 
  }
   /*========Nav========*/
-  .nav{height: 4rem;
+  .nav {
+   height: 4rem;
    margin-inline: 1.5rem;
  }
   .navData {
@@ -414,13 +418,13 @@ h1, h2, h3, h4, h5, h6 {
     top: 3rem;
     width: 50%;
     background-color: #333;
-    height: 100vh-3rem;
+    height: 100vh-3rem; /*you mean calc(100vh - 3rem) ?*/
     overflow: auto;
     padding-block: 1.5rem 3.5rem;
     pointer-events: none;
     align-items: center;
     opacity: 0;
-    transition: top .4s, opasity .3s;
+    transition: top .4s, opasity .3s; /*you mean opacity ?*/
   }
   .navLink{
     color:#fff;
@@ -459,10 +463,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0.5rem 0;
  }
  .dropdownLink{
-   color:#333;
+   color: #333;
    transition: color .3s;
    padding:.5rem 7rem;
-   margin:1rem 0;
+   margin: 1rem 0;
  }
  .dropdownLink:hover{
    color: #fff;
@@ -473,11 +477,53 @@ h1, h2, h3, h4, h5, h6 {
   /*========Media query  nav========*/
   @media screen and (min-width: 576px) {
     .nav{
-      height:5rem;
-      display:flex;
+      height: 5rem;
+      display: flex;
       justify-content: space-between;
     }
+}
+/*To use the grid you need to add a container element. Inside the container, you can add rows to organize your columns. Use col-1 through col-12 to determine the width of the column*/
+      
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  /*for mobile devices*/
+  [class^="col-"] {
+    width: 100%;
+  }
 
+  /* Media Queries */
+
+  @media only screen and (min-width: 600px) {
+  /* mobile landscape */
+    [class^="col-"] { width: 50%; }
+    .col-12 { width: 100%; }
+  }
+  
+  @media only screen and (min-width: 984px) {
+  /* tablets */
+    [class^="col-"] { width: 33.33%; }
+    .col-12 { width: 100%; }
+  }
+  
+  /* Desktop */
+  @media only screen and (min-width: 1200px) {
+    .col-12{ width: 100%; }
+    .col-11{ width: 91.66%; }
+    .col-10{ width: 83.33%; }
+    .col-9 { width: 75%; }
+    .col-8 { width: 66.66%; }
+    .col-7 { width: 58.33%; }
+    .col-6 { width: 50%; }
+    .col-5 { width: 41.66%; }
+    .col-4 { width: 33.33%; }
+    .col-3 { width: 25%; }
+    .col-2 { width: 16.66%; }
+    .col-1 { width: 8.33%; }
+  }
+    
 /*list styling classes*/
 .listNoStyle {
   list-style: none;
@@ -569,6 +615,102 @@ h1, h2, h3, h4, h5, h6 {
 }
 .isHidden {
   display: none;
+}
+/*food icons*/
+@font-face {
+  font-family: 'foodIcons';
+  src:  url('icons/foodIcons.eot?dzfose');
+  src:  url('icons/foodIcons.eot?dzfose#iefix') format('embedded-opentype'),
+    url('icons/foodIcons.ttf?dzfose') format('truetype'),
+    url('icons/foodIcons.woff?dzfose') format('woff'),
+    url('icons/foodIcons.svg?dzfose#foodIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'foodIcons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering  */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconVegan:before {
+  content: "\e904";
+}
+.iconDairy:before {
+  content: "\e900";
+}
+.iconDairyFree:before {
+  content: "\e901";
+}
+.iconEgg:before {
+  content: "\e902";
+}
+.iconEggFree:before {
+  content: "\e903";
+}
+.iconFavorite:before {
+  content: "\1f31f";
+}
+.iconFish:before {
+  content: "\1f41f";
+}
+.iconGluten:before {
+  content: "\1f35e";
+}
+.iconGlutenFree:before {
+  content: "\e907";
+}
+.iconNut:before {
+  content: "\e905";
+}
+.iconNutFree:before {
+  content: "\e909";
+}
+.iconShellfish:before {
+  content: "\1f980";
+}
+.iconSpicy:before {
+  content: "\1f336";
+}
+.iconVeggie:before {
+  content: "\1f33f";
+}
+
+/*helper classes*/
+.floatLeft {
+  float: left
+}
+.floatRight {
+  float: right;
+}
+.floarClear {
+  clear: both;
+}
+.inlineBlock, .inlineBlockCenter {
+  display: inline-block;
+}
+.inlineBlockCenter  {
+  margin: inherit auto;
+}
+.transition, .transitionFast, .transitionSlow {
+  transition: all .5s;
+}
+.transitionFast {
+  transition-duration: .2s;
+}
+.transitionSlow {
+  transition-duration: 1s;
 }
 
 /*text alignment classes*/
