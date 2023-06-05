@@ -330,13 +330,21 @@ h1, h2, h3, h4, h5, h6 {
 .isHidden {
   display: none;
 }
+
 /*cards*/
 .card {
   border-radius: 1rem;
-  border: solid 1px white;
   position: relative;
   color: var(--primaryDk);
   padding: 1em;
+  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.15);
+  transition: transform .5s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card img {
+  border-radius: 1rem;
 }
 
 .card p {
@@ -345,11 +353,12 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: 0;
   border-radius: 0 0 1rem 1rem;
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba(255,255,255,.5);
   padding: .5rem 1rem;
 }
 .card i {
   position: absolute;
+  padding: .5rem 1rem;
   right: 0;
   bottom: 0;
 }
@@ -439,7 +448,8 @@ i[class^="icon"]{
   display: inline-block;
 }
 .inlineBlockCenter  {
-  margin: inherit auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 .transition, .transitionFast, .transitionSlow {
   transition: all .5s;
