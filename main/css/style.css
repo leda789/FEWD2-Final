@@ -212,9 +212,14 @@ h1, h2, h3, h4, h5, h6 {
   }
     
 /*list styling classes*/
-.listNoStyle {
-  list-style: none;
-}
+.listNoStyle { list-style: none; }
+.listStyleSquare { list-style-type: square; }
+.listStyleCircle { list-style-type: circle; }
+.listStyleRoman { list-style-type: upper-roman; }
+.listStyleDecimal { list-style-type: decimal; }
+.listStyleUppercase { list-style-type: upper-latin; }
+.listStyleLowercase { list-style-type: lower-latin; }
+.listStyleLeadingZero { list-style-type: decimal-leading-zero; }
 
 /*colors*/
 .red {
