@@ -3,14 +3,17 @@
   
   --redLt: #F98280;
   --redDk: #B40B08;
-  --orangeLt: #EA7600;
-  --orangeDk: #8A4500;
+  --orangeLt: #D28356;
+  --orangeDk: #EA7600;
   --yellowLt: #EBBF21;
   --yellowDk: #695611;
   --greenLt: #84DB85;
   --greenDk: #1D631F;
   --blueLt: #86BBD8;  
   --blueDk: #2F5C7F;
+  --blueDkr: #0F2333;
+  
+  --primaryLt: #E8F1F7; 
 }
 body {
   font: 16px sans-serif;
@@ -234,7 +237,29 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--blueDk);
   background-color: var(--blueLt);
 }
-
+.redDark {
+  border-color: var(--redLt);  
+  background-color: var(--redDk);
+}
+.orangeDark {
+  border-color: var(--orangeLt);
+  background-color: var(--orangeDk);
+}
+.yellowDark {
+  border-color: var(--yellowLt);
+  background-color: var(--yellowDk);
+}
+.greenDark {
+  border-color: var(--greenLt);
+  background-color: var(--greenDk);
+}
+.blueDark {
+  border-color: var(--blueLt);
+  background-color: var(--blueDk);
+}
+.redDark, .yellowDark, .orangedark, .greenDark, .blueDark {
+  color: var(--primaryLt);
+}
 /* carousel classes
 *with 'n' amount of slides
 *coursel formatting: section.carousel>button.carouselBtnLeft+(div.carouselContainer>ul.carouselItems>li.carouselSlide*n)
@@ -313,7 +338,7 @@ h1, h2, h3, h4, h5, h6 {
   font-display: block;
 }
 
-i {
+i[class^="icon"]{
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'foodIcons' !important;
   speak: never;
@@ -396,6 +421,13 @@ i {
 .transitionSlow {
   transition-duration: 1s;
 }
+.upRight{ transform: rotate(45deg); }
+.right{ transform: rotate(90deg); }
+.downRight{ transform: rotate(135deg); }
+.down{ transform: rotate(180deg); }
+.downLeft{ transform: rotate(-135deg); }
+.left{ transform: rotate(-90deg); }
+.upLeft{ transform: rotate(-45deg); }
 
 /*text alignment classes*/
 .textRight {
