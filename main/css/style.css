@@ -328,6 +328,9 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.iconVegan:before {
+  content: "\e904";
+}
 .iconDairy:before {
   content: "\e900";
 }
