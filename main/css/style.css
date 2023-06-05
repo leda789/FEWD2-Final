@@ -336,10 +336,7 @@ h1, h2, h3, h4, h5, h6 {
   border: solid 1px white;
   position: relative;
 }
-.card img {
-  width: 100%;
-  height: 100%;
-}
+
 .card p {
   position: absolute;
   left: 0;
