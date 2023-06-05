@@ -4,15 +4,15 @@
   --redLt: #F98280;
   --redDk: #B40B08;
   --orangeLt: #D28356;
-  --orangeDk: #EA7600;
+  --orangeDk: #BB4400;
   --yellowLt: #EBBF21;
   --yellowDk: #695611;
   --greenLt: #84DB85;
   --greenDk: #1D631F;
   --blueLt: #86BBD8;  
   --blueDk: #2F5C7F;
-  --blueDkr: #0F2333;
   
+  --primaryDk: #0F2333;
   --primaryLt: #E8F1F7; 
 }
 body {
@@ -335,14 +335,23 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1rem;
   border: solid 1px white;
   position: relative;
+  color: var(--primaryDk);
+  padding: 1em;
 }
 
 .card p {
   position: absolute;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,.15);
+  bottom: 0;
   border-radius: 0 0 1rem 1rem;
+  background-color: rgba(255,255,255,.3);
+  padding: .5rem 1rem;
+}
+.card i {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 /*food icons*/
