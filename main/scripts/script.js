@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> be7747364244869ff41b9c96b0f7fb7735be963b
-
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> be7747364244869ff41b9c96b0f7fb7735be963b
-
-
-
 /************
  * NAV *
  ************/
@@ -25,16 +12,6 @@ menuBtn.addEventListener('click',() =>{
 closeBtn.addEventListener('click',() => {
     navLinks.style.left = '-100%';
 })
-
-const submenuIcon = document.querySelector('.arrowIcon');
-submenuIcon.addEventListener('click', () =>{
-    navLinks.classList.toggle('show1');
-})
-
-
-
-
-
 
 /************
  * CAROUSEL *
@@ -144,9 +121,4 @@ dotsNav.addEventListener('click', e => {
   updateDots(targetDot);
   hideShowArrows(targetIndex);
   pauseCarousel();
-<<<<<<< HEAD
 })
->>>>>>> upstream/main
-=======
-})
->>>>>>> be7747364244869ff41b9c96b0f7fb7735be963b

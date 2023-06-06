@@ -19,38 +19,36 @@
 </head>
 
 <body>
-  <nav>
-    <div class="navbar">
-        <i class="fa-solid fa-bars menuIcon"></i>
-        <div class="logo">
-            <a href="">LOGO</a>
-        </div>
-        <div class="navLinks">
-            <div class="sidebarLogo">
-                <span class="logoName"></span>
-                <i class="fa-solid fa-xmark closeIcon"></i>
-            </div>
-            <ul class="links">
-                <li>
-                    <a href="#">Menu1</a>
-                </li>
-                <li>
-                    <a href="#">Menu2</a>
-                    <i class="fa-solid fa-caret-down arrowIcon"></i>
-                    <ul class="subMenu">
-                        <li><a href="#">Submenu1</a></li>
-                        <li><a href="#">Submenu2</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Menu3</a>
-                </li>
-                <li>
-                    <a href="#">Menu4</a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar">
+   <i class="fa-solid fa-bars menuIcon"></i>
+            
+    <div class="logo">
+      <a href="">LOGO</a>
     </div>
+
+    <div class="navLinks">
+            <i class="fa-solid fa-xmark closeIcon"></i>
+
+        <ul class="links">
+            <li>
+                <a href="#">Menu1</a>
+            </li>
+            <li>
+                <a href="#">Menu2 <i class="fa-solid fa-caret-down arrowIcon"></i></a>
+                <ul class="subMenu">
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Menu3</a>
+            </li>
+            <li>
+                <a href="#">Menu4</a>
+            </li>
+        </ul>
+    </div>
+    
 </nav>
 
   <header>
@@ -96,12 +94,18 @@
         </a>
       </article>
     </section>
+    
+    <section class="addItemContainer">
+      <span class="itemName"></span>
+      <span class="itemPrice"></span>
+      <button class="itemButtonAdd"></button>
+    </section>
   </main>
   
   
 <section class="order" id="order">
   <h3 class="subHeading">Order Now!</h3>
-  <h1 class="heading">Fast Deliviry</h1>
+  <h1 class="heading">Fast Delivery</h1>
 
   <form action="">
       <div class="inputBox">
@@ -126,7 +130,7 @@
               <input type="number" id="quantity" >
           </div>
           <div class="inputs">
-              <label for="date">Date & Time</label>
+              <label for="date">Date &amp; Time</label>
               <input type="datetime" id="date" >
           </div>
           <div class="inputs">
