@@ -364,6 +364,57 @@ nav.navbar .navLinks .links { margin-top: 1.5rem; }
   text-shadow: 0 0 1rem white;
 }
 
+/*modal window
+* format to make: div.modal>button.modalBtn[onclick="openPopup()"]+div#popup.popup>button[onclick="closePopup()"]
+*/
+.modal {
+    width:100%;
+    height:100vh;  
+    background-color: #555;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modalBtn{
+    padding:.5rem 3rem;
+    cursor:pointer;
+    border-radius: .75rem;
+  }
+  .popup{
+    width:275px;
+    background: #fff;
+    border-radius: 1rem;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%) scale(.1);
+    text-align: center;
+    padding: 0 2rem 2rem;
+    color:#333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
+  .open-popup{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .popup h2{
+    margin: 2rem 0 1rem;
+  }
+   .popup button{
+    width:50%;
+    margin-top: .5rem;
+    border-radius: 2rem;
+    cursor:pointer;
+    box-shadow: 0 5px 5px #aaa;
+  }
+
+  @media screen and (min-width: 576px){
+    .popup{
+      width:400px;}
+  }
+
 /*food icons*/
 @font-face {
   font-family: 'foodIcons';
