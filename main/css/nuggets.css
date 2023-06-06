@@ -34,13 +34,6 @@ blockquote {
   padding: 1em .5em;
   background-color: rgba(0,0,0,.15);
 }
-button {
-  cursor: pointer;
-  background-color: white;
-  border: solid 2px black;
-  padding: .5em 1em;
-  border-radius: 1em;
-}
 cite {
   font-style: italic;
 }
@@ -335,6 +328,53 @@ nav.navbar .navLinks .links { margin-top: 1.5rem; }
 .isHidden {
   display: none;
 }
+/*buttons*/
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    border-radius: 1em;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid var(--primaryDkr);
+    background-color: var(--primaryLt);
+    color: var(--primaryDk);
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 20px;
+  }
+  
+  /* Dark button styling */
+  .btnDk {
+    background-color: var(--primaryDk);
+    color: var(--primaryLt);
+  }
+  
+  /* Extra Small button */
+  .btn-xs {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  /* Small button */
+  .btn-sm {
+    padding: 8px 16px;
+  }
+  
+  /* Large button */
+  .btn-lg {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+  
+  [class^="btn"]:hover {
+    background-color: var(--greenLt);
+  }
+  
+  [class^="btn"]:active {
+    background-color: var(--redLt);
+  }
+
 
 /*cards*/
 .card {
