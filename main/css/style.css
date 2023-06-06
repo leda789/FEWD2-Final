@@ -5,6 +5,53 @@
   color: var(--primaryLt);
   font-weight: 500;
 }
+.cardDeck {
+  padding: 2em;
+  gap: 1em;
+}
+.cardDeck h2 {
+  padding: 1em 0;
+}
+.cardDeck .statement {
+  width: min(100%,600px);
+  padding: min(15vh, 120px) 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 2.5em;
+}
 header {
   margin-top: 72px; /*size of nav*/
+}
+header h1 {
+  padding: 1em 0 .2em;
+}
+header img {
+  width: min(100%, 400px);
+}
+.hero {
+  padding: 4em .5em;
+}
+.hero p {
+  max-width: 700px;
+  padding: 1em 0;
+}
+.hero button {
+  margin-top: 2em;
+  font-size: 20px;
+}
+.hero button:hover {
+  background-color: var(--blueLt);
+  border-color: var(--blueDk);
+}
+
+@media screen and (min-width: 1200px) {
+  .card.leftSide {
+    margin-right: 0;
+  }
+  .card.rightSide {
+    margin-left: 0;
+  }
+  .cardDeck {
+    column-gap: 60px;
+  }
 }
