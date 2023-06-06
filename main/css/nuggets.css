@@ -51,7 +51,12 @@ code, samp {
 dt {
   font-weight: bold;
 }
-
+table {
+  border-collapse: collapse;
+}
+th, td {
+  padding: .2em;
+}
 /****nav****/
 nav.navbar{
     height: 4.5rem;
@@ -410,9 +415,9 @@ nav.navbar .navLinks .links { margin-top: 1.5rem; }
     box-shadow: 0 5px 5px #aaa;
   }
 
-  @media screen and (min-width: 576px){
-    .popup{
-      width:400px;}
+  @media screen and (min-width: 600px){
+    .popup {
+      width: 400px; }
   }
 
 /*food icons*/
@@ -509,13 +514,52 @@ add up all prices and checkout
   content: '+ Add';
 }
 .itemName {
-  text
+    
 }
 .itemPrice {
   text-align: left;
 }
 
+/*tables*/
+table.shadeSecondRows tr:nth-child(even), table.shadeOtherRows tr:nth-child(odd),
+table.shadeSecondColumns td:nth-child(even), table.shadeOtherColumns td:nth-child(odd),
+table.shadeSecondColumns th:nth-child(even), table.shadeOtherColumns th:nth-child(odd) {
+  background-color: rgba(0,0,0,.15);
+}
+table.wordBreak {
+  word-break: break-all;
+}
+.scrollX, .scrollXSticky {
+  overflow: auto;
+}
+.scrollXSticky td:first-of-type,
+.scrollXSticky th:first-of-type {
+  position: sticky;
+  left: 0;
+  background-color: var(--primaryLt);
+}
+.scrollYSticky tr:first-of-type {
+  position: sticky;
+  top: 0; /*height of sticky nav, if any*/
+  background-color: var(--primaryLt);
+}
+
 /*helper classes*/
+.borderDashed, .borderDashedLt {
+  border: 1px dashed var(--primaryDk);
+}
+.borderSolid, .borderSolidLt {
+  border: 1px solid var(--primaryDk);
+}
+.borderDotted, .borderDottedLt {
+  border: 1px dotted var(--primaryDk);
+}
+.borderDouble, .borderDoubleLt {
+  border: 1px double var(--primaryDk);
+}
+.borderDoubleLt, .borderDottedLt, .borderSolidLt, .borderDashedLt {
+  border-color: var(--primaryLt);
+}
 .floatLeft {
   float: left
 }
