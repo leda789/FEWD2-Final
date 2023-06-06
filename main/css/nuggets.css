@@ -173,20 +173,24 @@ nav.navbar .navLinks .links { margin-top: 1.5rem; }
   /*for mobile devices*/
   [class^="col-"] {
     width: 100%;
+    align-items: center;
   }
 
   /* Media Queries */
 
   @media only screen and (min-width: 600px) {
   /* mobile landscape */
-    [class^="col-"] { width: 50%; }
-    .col-12 { width: 100%; }
+    [class^="col-"] { flex-basis: 48%; }
+    .col-12 { flex-basis: 100%; }
   }
   
   @media only screen and (min-width: 984px) {
   /* tablets */
-    [class^="col-"] { width: 33.33%; }
-    .col-12 { width: 100%; }
+    [class^="col-"] {
+      flex-basis: 32%; 
+      flex-grow: 1;
+    }
+    .col-12 { flex-basis: 100%; }
   }
   
   /* Desktop */
@@ -239,6 +243,10 @@ nav.navbar .navLinks .links { margin-top: 1.5rem; }
 .red, .orange, .yellow, .green, .blue {
   color: var(--primaryDk);
 }
+.dark {
+  border-color: var(--primaryLt);
+  background-color: var(--primaryDk);
+}
 .redDark {
   border-color: var(--redLt);  
   background-color: var(--redDk);
@@ -259,7 +267,7 @@ nav.navbar .navLinks .links { margin-top: 1.5rem; }
   border-color: var(--blueLt);
   background-color: var(--blueDk);
 }
-.redDark, .yellowDark, .orangedark, .greenDark, .blueDark {
+.redDark, .yellowDark, .orangedark, .greenDark, .blueDark, .dark {
   color: var(--primaryLt);
 }
 /* carousel classes
@@ -569,10 +577,10 @@ table.wordBreak {
 .floarClear {
   clear: both;
 }
-.inlineBlock, .inlineBlockCenter {
+.inlineBlock {
   display: inline-block;
 }
-.inlineBlockCenter  {
+.center {
   margin-right: auto;
   margin-left: auto;
 }
