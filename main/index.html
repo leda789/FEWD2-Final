@@ -19,7 +19,38 @@
 </head>
 
 <body>
-  <nav></nav>
+<nav class="navbar">
+   <i class="fa-solid fa-bars menuIcon"></i>
+            
+    <div class="logo">
+      <a href="">LOGO</a>
+    </div>
+
+    <div class="navLinks">
+            <i class="fa-solid fa-xmark closeIcon"></i>
+
+        <ul class="links">
+            <li>
+                <a href="#">Menu1</a>
+            </li>
+            <li>
+                <a href="#">Menu2 <i class="fa-solid fa-caret-down arrowIcon"></i></a>
+                <ul class="subMenu">
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Menu3</a>
+            </li>
+            <li>
+                <a href="#">Menu4</a>
+            </li>
+        </ul>
+    </div>
+    
+</nav>
+
   <header>
     <hgroup class="orange textCenter">
       <h1 class="uppercase">Nuggets</h1>
@@ -63,8 +94,61 @@
         </a>
       </article>
     </section>
+    
+    <section class="addItemContainer">
+      <span class="itemName"></span>
+      <span class="itemPrice"></span>
+      <button class="itemButtonAdd"></button>
+    </section>
   </main>
   
+  
+<section class="order" id="order">
+  <h3 class="subHeading">Order Now!</h3>
+  <h1 class="heading">Fast Delivery</h1>
+
+  <form action="">
+      <div class="inputBox">
+          <div class="inputs">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" >
+          </div>
+          <div class="inputs">
+              <label for="number">Your Number</label>
+              <input type="number" id="number" >
+          </div>
+          <div class="inputs">
+              <label for="order">Your Order</label>
+              <input type="text" id="order" >
+          </div>
+          <div class="inputs">
+              <label for="additional">Additional Food</label>
+              <input type="text" id="additional" >
+          </div>
+          <div class="inputs">
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" >
+          </div>
+          <div class="inputs">
+              <label for="date">Date &amp; Time</label>
+              <input type="datetime" id="date" >
+          </div>
+          <div class="inputs">
+              <label for="address">Address</label>
+              <textarea name="" id="address" cols="30" rows="10"></textarea>
+          </div>
+          <div class="inputs">
+              <label for="message">Your Message</label>
+              <textarea name="" id="message" cols="30" rows="10"></textarea>
+          </div>
+      </div>
+
+      <input type="submit" value="Order Now!" class="button">
+  </form>
+
+
+</section>
+
   <script src="scripts/script.js"></script>
 </body>
 </html>
