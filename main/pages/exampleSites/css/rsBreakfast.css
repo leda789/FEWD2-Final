@@ -1,0 +1,52 @@
+body {
+  margin-top: 72px;
+  font-family: 'Poltawski Nowy', serif;
+}
+.carousel {
+  height: min(450px, 61vw);
+  padding-bottom: 3em;
+  max-width: 1000px;
+}
+form {
+  padding: 0;
+  max-width: 1000px;
+}
+label {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 .5em;
+}
+label:nth-child(even) {
+  background-color: rgba(255,255,255,.1);
+}
+.pageTitle {
+  padding: 1em;
+}
+.itemName {
+  flex-grow: 1;
+}
+.carouselSlide {
+  background-color: transparent;
+}
+#orderUp {
+  width: min(50vw, 300px);
+  margin: 1em auto;
+  display: block;
+}
+@media screen and (min-width: 800px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  label:nth-child(even) {
+    background-color: transparent;
+  }
+  label:nth-child(3n), label:nth-child(5n-3){
+    background-color: rgba(255,255,255,.1);
+  }
+ #orderUp {
+    grid-column: span 2;
+    align-self: center;
+  }
+}

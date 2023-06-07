@@ -16,12 +16,12 @@ closeBtn.addEventListener('click',() => {
 /************
  * MODAL *
  ************/
-let popup = document.getElementById('popup');
+const modal = document.querySelector('.modal');
 function openPopup(){
-    popup.classList.add('open-popup');
+    modal.classList.add('open-popup');
 }
 function closePopup(){
-    popup.classList.remove('open-popup');
+    modal.classList.remove('open-popup');
 }
 /************
  * CAROUSEL *
@@ -134,6 +134,21 @@ dotsNav.addEventListener('click', e => {
   pauseCarousel();
 })
 }
+function debounce(func, delay) {
+  let timerId;
+  return function() {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timerId);
+    timerId = setTimeout(function() {
+      func.apply(context, args);
+    }, delay)
+  }
+}
+
+window.addEventListener('resize', debounce(function() {
+  location.reload();
+}, 250)); 
 
 /************
  *ORDER  APP*
@@ -172,4 +187,14 @@ function completeOrder(e) {
   costTotal /= 100;
   costTotal = costTotal.toFixed(2);
   costTotal = '$' + costTotal;
+  
+  const orderPopup = document.querySelector('#orderPopup');
+  const orderSummary = document.querySelector('#orderSummary');
+  console.log(orderSummary);
+  order.forEach(order => { 
+    let node = document.createElement("li");
+    let textNode = document.createTextNode(document.querySelector('label[for="' + order +'"]').firstElementChild.textContent);
+    node.appendChild(textNode);
+    orderSummary.appendChild(node);
+  })
 }
