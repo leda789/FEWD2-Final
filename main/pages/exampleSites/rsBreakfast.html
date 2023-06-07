@@ -1,3 +1,72 @@
-<!-- This is going to be an example of webpage for a restaurant called "R's Breakfast"
-      There should be a seperate CSS file just containing the extra css you used for your web page.
-  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nuggets</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="css/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="css/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="css/icons/favicon-16x16.png">
+  <link rel="manifest" href="css/icons/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/nuggets.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<nav class="navbar">
+  <i class="fa-solid fa-bars menuIcon"></i>
+  <div class="logo">
+    <a href="#">Nuggets</a>
+  </div>
+  <div class="navLinks">
+    <i class="fa-solid fa-xmark closeIcon"></i>
+    <ul class="links">
+      <li>
+        <a href="#">CSS</a>
+      </li>
+      <li>
+        <a href="#">JS <i class="fa-solid fa-caret-down arrowIcon"></i></a>
+        <ul class="subMenu">
+          <li><a href="#">Carousel</a></li>
+          <li><a href="#">Ordering</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Helpers</a>
+      </li>
+      <li>
+        <a href="#">Icons</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<form action="" method="get">
+  <label for="chickenParmesan">
+    <span class="itemName">Chicken Parmesan </span><span class="itemPrice">17.50</span>
+    <input type="button" class="addItemButton" id="chickenParmesan" value="+ Add">
+  </label>
+  <label for="eggplantParmesan">
+    <span class="itemName">Eggplant Parmesan </span><span class="itemPrice">15.50</span>
+    <input type="button" class="addItemButton" id="eggplantParmesan" value="+ Add">
+  </label>
+
+  <input onclick="openPopup()" id="orderUp" type="submit" value="Get it started!">
+  <div class="modal">
+    <div class="popup" id="popup">
+      <p>i hope this works</p>
+      <button type="button" onclick="closePopup()">Continue to Payment</button>
+    </div>
+  </div>
+</form>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
