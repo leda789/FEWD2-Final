@@ -29,10 +29,18 @@ label:nth-child(even) {
 .carouselSlide {
   background-color: transparent;
 }
+#orderPopup>h3, #orderPopup li, #orderTotal {
+  padding: 1em;
+}
 #orderUp {
   width: min(50vw, 300px);
   margin: 1em auto;
   display: block;
+}
+#popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media screen and (min-width: 800px) {
   form {
