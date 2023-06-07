@@ -19,89 +19,106 @@
 </head>
 
 <body>
-  <nav>
-    <div class="navbar">
-        <i class="fa-solid fa-bars menuIcon"></i>
-        <div class="logo">
-            <a href="">LOGO</a>
-        </div>
-        <div class="navLinks">
-            <div class="sidebarLogo">
-                <span class="logoName"></span>
-                <i class="fa-solid fa-xmark closeIcon"></i>
-            </div>
-            <ul class="links">
-                <li>
-                    <a href="#">Menu1</a>
-                </li>
-                <li>
-                    <a href="#">Menu2</a>
-                    <i class="fa-solid fa-caret-down arrowIcon"></i>
-                    <ul class="subMenu">
-                        <li><a href="#">Submenu1</a></li>
-                        <li><a href="#">Submenu2</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Menu3</a>
-                </li>
-                <li>
-                    <a href="#">Menu4</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+<nav class="navbar">
+  <i class="fa-solid fa-bars menuIcon"></i>
+  <div class="logo">
+    <a href="#">Nuggets</a>
+  </div>
+  <div class="navLinks">
+    <i class="fa-solid fa-xmark closeIcon"></i>
+    <ul class="links">
+      <li>
+        <a href="#">CSS</a>
+      </li>
+      <li>
+        <a href="#">JS <i class="fa-solid fa-caret-down arrowIcon"></i></a>
+        <ul class="subMenu">
+          <li><a href="#">Carousel</a></li>
+          <li><a href="#">Ordering</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Helpers</a>
+      </li>
+      <li>
+        <a href="#">Icons</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
-  <header>
-    <hgroup class="orange textCenter">
-      <h1 class="uppercase">Nuggets</h1>
-      <p>The Best Restaurant Framework</p>
-    </hgroup>
-  </header>
-  <main>
-    <section class="hero">
-      <h2></h2>
-      <p></p>
-    </section>
-    <section class="blueDark">
-      <h2>Customizable Components</h2>
-      <article class="card">
-        <a href="#">
-          <img src="#" alt="#">
-          <p>Carousel</p>
-          <i class="fa-solid fa-circle-arrow-up downRight"></i>
-        </a>
-      </article>
-      <article class="card">
-        <a href="#">
-          <img src="#" alt="#">
-          <p>Navbar</p>
-          <i class="fa-solid fa-circle-arrow-up downRight"></i>
-        </a>
-      </article>
-      <p class="inlineBlockCenter">We have hand picked our elements to make them just the right type for your business. Whether you run a coffee shop, a sushi bar, or a fast food business, there's something in store for everyone.</p>
-      <article class="card">
-        <a href="#">
-        <img src="#" alt="#">
-        <p>Buttons</p>
-        <i class="fa-solid fa-circle-arrow-up downRight"></i>
-        </a>
-      </article>
-      <article class="card">
-        <a href="#">
-          <img src="images/foodIcons.jpg" alt="A collection of all the food icons that were created for this project">
-          <p>Icons</p>
-          <i class="fa-solid fa-circle-arrow-up downRight"></i>
-        </a>
-      </article>
-    </section>
-  </main>
+<header class="orange textCenter">
+  <hgroup>
+    <h1 class="uppercase">Nuggets</h1>
+    <p>The Best Restaurant Framework</p>
+  </hgroup>
+  <img src="css/icons/logoNuggets.png" alt="a logo of a plate with silverware" class="center">
+</header>
+
+<main>
+  <section class="hero textCenter dark">
+    <h2>Design tools catered to your needs.</h2>
+    <p class="center">We understand that designing a website can be tough on your own. That's why we curated items with restaurants specifically in mind. It takes a crew to run a restaurant, so we'll help online.</p>
+    <button class="orange transition">Download <i class="fa-solid fa-file-arrow-down"></i></button>
+  </section>
   
+  <section class="blueDark container cardDeck">
+    <h2 class="col-12 textCenter">Customizable Components</h2>
+    <div class="col-6">
+      <article class="card center leftSide">
+      <a href="#">
+        <img src="#" alt="#">
+        <p>Carousel</p>
+        <i class="fa-solid fa-circle-arrow-up downRight"></i>
+      </a>
+      </article>
+    </div>
+    <div class="col-6">
+    <article class="card center rightSide">
+      <a href="#">
+        <img src="#" alt="#">
+        <p>Navbar</p>
+        <i class="fa-solid fa-circle-arrow-up downRight"></i>
+      </a>
+    </article></div>
+    <div class="col-12"><p class="center textCenter statement">We have hand picked our elements to make them just the right type for your business. Whether you run a coffee shop, a sushi bar, or a fast food business, there's something in store for everyone.</p></div>
+    <div class="col-6">
+      <article class="card center leftSide">
+      <a href="#">
+      <img src="#" alt="#">
+      <p>Buttons</p>
+      <i class="fa-solid fa-circle-arrow-up downRight"></i>
+      </a>
+    </article>
+    </div>
+    <div class="col-6">
+      <article class="card center rightSide">
+      <a href="#">
+        <img src="images/foodIcons.jpg" alt="A collection of all the food icons that were created for this project">
+        <p>Icons</p>
+        <i class="fa-solid fa-circle-arrow-up downRight"></i>
+      </a>
+    </article>
+    </div>
+  </section>
+</main>
+
+<form action="" method="get">
+  <label for="chickenParmesan">
+    <span class="itemName">Chicken Parmesan </span><span class="itemPrice">17.50</span>
+    <input type="button" class="addItemButton" id="chickenParmesan" value="+ Add">
+  </label>
+  <label for="eggplantParmesan">
+    <span class="itemName">Eggplant Parmesan </span><span class="itemPrice">15.50</span>
+    <input type="button" class="addItemButton" id="eggplantParmesan" value="+ Add">
+  </label>
+  
+  <input id="orderUp" type="submit" value="Get it started!">
+</form>
   
 <section class="order" id="order">
   <h3 class="subHeading">Order Now!</h3>
-  <h1 class="heading">Fast Deliviry</h1>
+  <h1 class="heading">Fast Delivery</h1>
 
   <form action="" method="post">
       <div class="inputBox">
@@ -119,14 +136,14 @@
           </div>
           <div class="inputs">
               <label for="additional">Additional Food</label>
-              <input type="text" id="additional" >
+              <input type="radio" id="additional" >
           </div>
           <div class="inputs">
               <label for="quantity">Quantity</label>
-              <input type="number" id="quantity" >
+              <input type="checkbox" id="quantity" >
           </div>
           <div class="inputs">
-              <label for="date">Date & Time</label>
+              <label for="date">Date &amp; Time</label>
               <input type="datetime" id="date" >
           </div>
           <div class="inputs">

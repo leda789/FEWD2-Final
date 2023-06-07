@@ -12,13 +12,15 @@
   --blueLt: #86BBD8;  
   --blueDk: #2F5C7F;
   
+  --primaryDkr: #0B1822;
   --primaryDk: #0F2333;
-  --primaryLt: #E8F1F7; 
+  --primaryLt: #E8F1F7;
+  --primaryLt2: #fff2e5;
 }
+html { scroll-behavior: smooth; }
 body {
-  font: 16px sans-serif;
+  font: 16px 'outfit', sans-serif;
 }
-
 /*generic styling*/
 abbr {
   text-decoration: underline dotted;
@@ -32,13 +34,6 @@ blockquote {
   padding: 1em .5em;
   background-color: rgba(0,0,0,.15);
 }
-button {
-  cursor: pointer;
-  background-color: white;
-  border: solid 2px black;
-  padding: .5em 1em;
-  border-radius: 1em;
-}
 cite {
   font-style: italic;
 }
@@ -49,126 +44,165 @@ code, samp {
 dt {
   font-weight: bold;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: serif;
+table {
+  border-collapse: collapse;
 }
-
-/*========Header===========*/
-.header{
+th, td {
+  padding: .2em;
+}
+/****nav****/
+nav.navbar{
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0 2px 8px #555;
-    background-color: #333;
-    z-index: 100; 
+    background-color: var(--primaryDk);
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    z-index: 10;
  }
-  /*========Nav========*/
-  .nav {
-   height: 4rem;
-   margin-inline: 1.5rem;
+nav.navbar a { text-decoration: none; }
+nav.navbar ul { list-style: none; }
+nav.navbar .logo a {
+    color: var(--primaryLt);
+    font-size: 2rem;
  }
-  .navData {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-  }
-  .navLogo{
-    display: inline-flex;
-    align-items: center;
-    column-gap: 0.2rem;
-    color: #fff;
-    transition: color .3s;
-  }
-  .navLogo:hover{color: #555;}
-  .navToggle{
-    position: relative;
-    width: 1rem;
-    height: 1rem;
-  }
-  .menuIcon,.closeIcon {
-    font-size: 1.5rem;
-    color: #fff;
-    position: absolute;
-    display: grid;
-    place-items: center;
-    inset: 0;
-    cursor: pointer;
-    transition: opacity .1s, transform .4s;
-  }
-  .closeIcon {opacity: 0;}
-  .navMenu{
-    position: absolute;
-    right: 0;
-    top: 3rem;
-    width: 50%;
-    background-color: #333;
-    height: 100vh-3rem; /*you mean calc(100vh - 3rem) ?*/
-    overflow: auto;
-    padding-block: 1.5rem 3.5rem;
-    pointer-events: none;
-    align-items: center;
-    opacity: 0;
-    transition: top .4s, opasity .3s; /*you mean opacity ?*/
-  }
-  .navLink{
-    color:#fff;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color .3s;
-  }
-  .navLink:hover{background-color: #555;}
-  .showMenu{
-    top:3rem;
-    opacity:1;
-    pointer-events: initial;
-  }
-  .showIcon .menuIcon{
-    opacity: 0;
-    transform: rotate(90deg);
-  }
-  .showIcon .closeIcon{
-    opacity: 1;
-    transform: rotate(90deg);
-  }
- .dropdownIcon{cursor: pointer;}
- .arrowIcon{transition: transform .4s;}
- .dropdownItem, .dropdownList{display: grid;}
- .dropdownContent{
-    background-color: #555;
-    height: 0;
-    overflow: hidden;
-    transition: height .4s;
- }
- .dropdownList{
-    row-gap: 1rem;
-    justify-content: center;
-    margin: 0.5rem 0;
- }
- .dropdownLink{
-   color: #333;
-   transition: color .3s;
-   padding:.5rem 7rem;
-   margin: 1rem 0;
- }
- .dropdownLink:hover{
-   color: #fff;
-   background-color: #333;
-   align-items: center;
- }
- .showDropdown .arrowIcon{transform: rotate(180deg);}
-  /*========Media query  nav========*/
-  @media screen and (min-width: 576px) {
-    .nav{
-      height: 5rem;
-      display: flex;
-      justify-content: space-between;
-    }
+nav.navbar .links li {
+  position: relative;
+  height: 100%;
 }
+nav.navbar .links li:hover {
+  color: var(--primaryLt2);
+}
+ nav.navbar .links li a{
+    color: var(--primaryLt);
+    display: block;
+ }
+ nav.navbar .links li .arrowIcon {
+    color: var(--primaryLt);
+    transition: all .3s;
+}
+nav.navbar .links li:hover .arrowIcon{
+    transform: rotate(180deg);
+}
+
+nav.navbar .navLinks .links li:hover .subMenu,
+nav.navBar .navLinks .links li .subMenu:hover 
+{ display: block; }
+
+nav.navbar .navLinks{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: min(270px, 100%);
+    background-color: var(--primaryDk);
+    line-height: 50px;
+    padding: 1.5rem;
+    transition: all .5s ease;
+    z-index: 10;
+ }
+.navbar .menuIcon, .navLinks .closeIcon {
+    color: var(--primaryLt);
+    font-size: 45px;
+    cursor: pointer;
+ }
+.navLinks .closeIcon { transform: translateX(190px); }
+nav.navbar .navLinks .links { margin-top: 1.5rem; }
+.navbar .navLinks .links .subMenu  {
+   display: none;
+   position: relative;
+   top: 0;
+   left: 2rem;
+   box-shadow: none;
+ }
+
+@media screen and (min-width: 600px) {
+  nav.navbar .navLinks .links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+ }
+  nav.navbar .navLinks {
+    position: static;
+    height: 100%;
+    width: auto;
+    padding: 0;
+    line-height: 70px; /*to center align text*/
+  }
+  nav.navbar .links li a{
+    padding: 0 1em;
+  }
+  .navbar .navLinks .links .subMenu {  
+    border-radius: 0 0 4px 4px;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    background-color: var(--primaryDkr);
+    display: none;
+    z-index: 2;
+  }
+  nav.navbar .menuIcon, .navLinks .closeIcon {display: none;}
+}
+
+@media screen and (min-width: 800px) {
+  nav.navbar .links li a {
+    padding: 0 1.75em;
+  }
+}
+
+/*form styling*/
+form{
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  border: 1px solid var(--primaryDk);
+  padding: 1.5rem;
+  margin: 0 auto;
+  height: min(100vh, 50%);
+
+}
+fieldset{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+input,
+textarea {
+  background-color: var(--primaryLt);
+  border-radius: .17rem;
+  border: 1px solid var(--primaryDkr); 
+  color: var(--primaryDk);
+}
+label { display: block; }
+
+input[type="radio"], input[type="checkbox"] {
+  -webkit-appearance: none;
+  background-color: var(--primaryLt);
+  padding: .5em;
+}
+input[type="radio"] {
+  border-radius: 50%;
+}
+input[type="radio"]:checked { 
+  background-color: #555;
+  background-image: radial-gradient( var(--primaryDk) 30%, white 30%);
+}
+input[type="checkbox"]:checked {
+  background-color: #555;
+  background-image: linear-gradient(to top right, transparent 45%, var(--primaryDk) 45%, var(--primaryDk) 55%, transparent 55%),
+                    linear-gradient(to top left, white 45%, var(--primaryDk) 45%, var(--primaryDk) 55%, white 55%);
+}
+input:focus, textarea:focus, input[type="radio"]:hover, input[type="checkbox"]:hover, input[type="radio"]:checked, input[type="checkbox"]:checked {
+  outline: solid 1px var(--blueDk);
+  border: solid 1px var(--blueDk);
+  box-shadow: 0 0 3px var(--blueDk);
+}
+
 /*To use the grid you need to add a container element. Inside the container, you can add rows to organize your columns. Use col-1 through col-12 to determine the width of the column*/
       
   .container {
@@ -179,20 +213,24 @@ h1, h2, h3, h4, h5, h6 {
   /*for mobile devices*/
   [class^="col-"] {
     width: 100%;
+    align-items: center;
   }
 
   /* Media Queries */
 
   @media only screen and (min-width: 600px) {
   /* mobile landscape */
-    [class^="col-"] { width: 50%; }
-    .col-12 { width: 100%; }
+    [class^="col-"] { flex-basis: 48%; }
+    .col-12 { flex-basis: 100%; }
   }
   
   @media only screen and (min-width: 984px) {
   /* tablets */
-    [class^="col-"] { width: 33.33%; }
-    .col-12 { width: 100%; }
+    [class^="col-"] {
+      flex-basis: 32%; 
+      flex-grow: 1;
+    }
+    .col-12 { flex-basis: 100%; }
   }
   
   /* Desktop */
@@ -242,6 +280,13 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--blueDk);
   background-color: var(--blueLt);
 }
+.red, .orange, .yellow, .green, .blue {
+  color: var(--primaryDk);
+}
+.dark {
+  border-color: var(--primaryLt);
+  background-color: var(--primaryDk);
+}
 .redDark {
   border-color: var(--redLt);  
   background-color: var(--redDk);
@@ -262,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--blueLt);
   background-color: var(--blueDk);
 }
-.redDark, .yellowDark, .orangedark, .greenDark, .blueDark {
+.redDark, .yellowDark, .orangedark, .greenDark, .blueDark, .dark {
   color: var(--primaryLt);
 }
 /* carousel classes
@@ -330,6 +375,53 @@ h1, h2, h3, h4, h5, h6 {
 .isHidden {
   display: none;
 }
+/*buttons*/
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    border-radius: 1em;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid var(--primaryDkr);
+    background-color: var(--primaryLt);
+    color: var(--primaryDk);
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 20px;
+  }
+  
+  /* Dark button styling */
+  .btnDk {
+    background-color: var(--primaryDk);
+    color: var(--primaryLt);
+  }
+  
+  /* Extra Small button */
+  .btn-xs {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  /* Small button */
+  .btn-sm {
+    padding: 8px 16px;
+  }
+  
+  /* Large button */
+  .btn-lg {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+  
+  [class^="btn"]:hover {
+    background-color: var(--greenLt);
+  }
+  
+  [class^="btn"]:active {
+    background-color: var(--redLt);
+  }
+
 
 /*cards*/
 .card {
@@ -343,7 +435,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.1);
   z-index: 1;
 }
-.card a:link {
+.card a:link, .card a:visited {
   color: var(--primaryDk);
 }
 
@@ -371,6 +463,57 @@ h1, h2, h3, h4, h5, h6 {
 .card p, .card i {
   text-shadow: 0 0 1rem white;
 }
+
+/*modal window
+* format to make: div.modal>button.modalBtn[onclick="openPopup()"]+div#popup.popup>button[onclick="closePopup()"]
+*/
+.modal {
+    width:100%;
+    height:100vh;  
+    background-color: #555;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modalBtn{
+    padding:.5rem 3rem;
+    cursor:pointer;
+    border-radius: .75rem;
+  }
+  .popup{
+    width:275px;
+    background: #fff;
+    border-radius: 1rem;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%) scale(.1);
+    text-align: center;
+    padding: 0 2rem 2rem;
+    color:#333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
+  .open-popup{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .popup h2{
+    margin: 2rem 0 1rem;
+  }
+   .popup button{
+    width:50%;
+    margin-top: .5rem;
+    border-radius: 2rem;
+    cursor:pointer;
+    box-shadow: 0 5px 5px #aaa;
+  }
+
+  @media screen and (min-width: 600px){
+    .popup {
+      width: 400px; }
+  }
 
 /*food icons*/
 @font-face {
@@ -443,7 +586,76 @@ i[class^="icon"]{
   content: "\1f33f";
 }
 
+/*food price application*/
+/*
+how to format html for collecting info?
+create class for adding buttons
+add event listener to all buttons with class
+button checks name of food and adds it
+button checks price of food and adds it
+perhaps in name/property pair?
+when at checkout, retreive all pairs and list them
+add up all prices and checkout
+*/
+
+.addItemContainer {
+  
+}
+.addItemButton {
+  border-radius: 1rem;
+  padding: .5em 1em;
+}
+
+.itemName {
+    
+}
+.itemPrice {
+  text-align: right;
+}
+.itemPrice::before {
+  content: "$";
+}
+
+/*tables*/
+table.shadeSecondRows tr:nth-child(even), table.shadeOtherRows tr:nth-child(odd),
+table.shadeSecondColumns td:nth-child(even), table.shadeOtherColumns td:nth-child(odd),
+table.shadeSecondColumns th:nth-child(even), table.shadeOtherColumns th:nth-child(odd) {
+  background-color: rgba(0,0,0,.15);
+}
+table.wordBreak {
+  word-break: break-all;
+}
+.scrollX, .scrollXSticky {
+  overflow: auto;
+}
+.scrollXSticky td:first-of-type,
+.scrollXSticky th:first-of-type {
+  position: sticky;
+  left: 0;
+  background-color: var(--primaryLt);
+}
+.scrollYSticky tr:first-of-type {
+  position: sticky;
+  top: 0; /*height of sticky nav, if any*/
+  background-color: var(--primaryLt);
+}
+
 /*helper classes*/
+.borderDashed, .borderDashedLt {
+  border: 1px dashed var(--primaryDk);
+}
+.borderSolid, .borderSolidLt {
+  border: 1px solid var(--primaryDk);
+}
+.borderDotted, .borderDottedLt {
+  border: 1px dotted var(--primaryDk);
+}
+.borderDouble, .borderDoubleLt {
+  border: 1px double var(--primaryDk);
+}
+.borderDoubleLt, .borderDottedLt, .borderSolidLt, .borderDashedLt {
+  border-color: var(--primaryLt);
+}
 .floatLeft {
   float: left
 }
@@ -453,10 +665,10 @@ i[class^="icon"]{
 .floarClear {
   clear: both;
 }
-.inlineBlock, .inlineBlockCenter {
+.inlineBlock {
   display: inline-block;
 }
-.inlineBlockCenter  {
+.center {
   margin-right: auto;
   margin-left: auto;
 }

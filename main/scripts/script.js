@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> be7747364244869ff41b9c96b0f7fb7735be963b
-
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> be7747364244869ff41b9c96b0f7fb7735be963b
-
-
-
 /************
  * NAV *
  ************/
@@ -26,19 +13,20 @@ closeBtn.addEventListener('click',() => {
     navLinks.style.left = '-100%';
 })
 
-const submenuIcon = document.querySelector('.arrowIcon');
-submenuIcon.addEventListener('click', () =>{
-    navLinks.classList.toggle('show1');
-})
-
-
-
-
-
-
+/************
+ * MODAL *
+ ************/
+let popup = document.getElementById('popup');
+function openPopup(){
+    popup.classList.add('open-popup');
+}
+function closePopup(){
+    popup.classList.remove('open-popup');
+}
 /************
  * CAROUSEL *
  ************/
+if(document.querySelector('.carouselItems')){
 const slideWrapper = document.querySelector('.carouselItems');
 const slides = Array.from(slideWrapper.children);
 const nextBtn = document.querySelector('.carouselRightBtn');
@@ -144,9 +132,44 @@ dotsNav.addEventListener('click', e => {
   updateDots(targetDot);
   hideShowArrows(targetIndex);
   pauseCarousel();
-<<<<<<< HEAD
 })
->>>>>>> upstream/main
-=======
-})
->>>>>>> be7747364244869ff41b9c96b0f7fb7735be963b
+}
+
+/************
+ *ORDER  APP*
+ ************/
+const plates = document.querySelectorAll(".addItemButton");
+const orderUp = document.querySelector("#orderUp");
+var order = [];
+var totalPrice = [];
+
+plates.forEach(plate => plate.addEventListener('click', addPlateToOrder));
+function addPlateToOrder(e){
+  if(!e.target.classList.contains("added")) {
+    order.push(e.target.id);
+    totalPrice.push(e.target.previousElementSibling.innerHTML);
+    e.target.value = "- Remove";
+    e.target.classList.add("added");
+  }
+  else { removePlateFromOrder(e); }
+}
+function removePlateFromOrder(e) {
+  order.splice(order.indexOf(e.target.id), 1);
+  totalPrice.splice(totalPrice.indexOf(e.target.previousElementSibling.innerHTML), 1);
+  e.target.value = "+ Add";
+  e.target.classList.remove("added");
+}
+
+orderUp.addEventListener('click', completeOrder);
+
+function completeOrder(e) {
+  e.preventDefault();
+  let costTotal = 0;
+  totalPrice.forEach(cost => {
+    cost *= 100; //multiply to prevent floating point errors
+    costTotal += cost;
+  })
+  costTotal /= 100;
+  costTotal = costTotal.toFixed(2);
+  costTotal = '$' + costTotal;
+}
