@@ -101,7 +101,27 @@
     </article>
     </div>
   </section>
+  
+  <section class="orange container websiteLinks">
+    <h2 class="textCenter center col-12">See what you could build...</h2>
+    <div class="col-4 center">
+      <a href="#"><!--put your link to webpage here-->
+        <img src="#" alt="thumbnail of your website">
+      </a>
+    </div>
+    <div class="col-4 center">
+      <a href="#"><!--put your link to webpage here-->
+        <img src="#" alt="thumbnail of your website">
+      </a>
+    </div>
+    <div class="col-4 center">
+      <a href="#"><!--put your link to webpage here-->
+        <img src="#" alt="thumbnail of your website">
+      </a>
+    </div>
+  </section>
 </main>
+
 
 <form action="" method="get">
   <label for="chickenParmesan">
@@ -112,56 +132,18 @@
     <span class="itemName">Eggplant Parmesan </span><span class="itemPrice">15.50</span>
     <input type="button" class="addItemButton" id="eggplantParmesan" value="+ Add">
   </label>
-  
-  <input id="orderUp" type="submit" value="Get it started!">
+
+  <input onclick="openPopup()" id="orderUp" type="submit" value="Get it started!">
+  <div class="modal">
+    <div class="popup" id="popup">
+      <p>i hope this works</p>
+      <button type="button" onclick="closePopup()">Continue to Payment</button>
+    </div>
+  </div>
 </form>
-  
-<section class="order" id="order">
-  <h3 class="subHeading">Order Now!</h3>
-  <h1 class="heading">Fast Delivery</h1>
-
-  <form action="">
-      <div class="inputBox">
-          <div class="inputs">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" >
-          </div>
-          <div class="inputs">
-              <label for="number">Your Number</label>
-              <input type="number" id="number" >
-          </div>
-          <div class="inputs">
-              <label for="order">Your Order</label>
-              <input type="text" id="order" >
-          </div>
-          <div class="inputs">
-              <label for="additional">Additional Food</label>
-              <input type="radio" id="additional" >
-          </div>
-          <div class="inputs">
-              <label for="quantity">Quantity</label>
-              <input type="checkbox" id="quantity" >
-          </div>
-          <div class="inputs">
-              <label for="date">Date &amp; Time</label>
-              <input type="datetime" id="date" >
-          </div>
-          <div class="inputs">
-              <label for="address">Address</label>
-              <textarea name="" id="address" cols="30" rows="10"></textarea>
-          </div>
-          <div class="inputs">
-              <label for="message">Your Message</label>
-              <textarea name="" id="message" cols="30" rows="10"></textarea>
-          </div>
-      </div>
-
-      <input type="submit" value="Order Now!" class="button">
-  </form>
 
 
-</section>
 
-  <script src="scripts/script.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>

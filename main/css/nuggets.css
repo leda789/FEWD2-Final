@@ -202,6 +202,13 @@ input:focus, textarea:focus, input[type="radio"]:hover, input[type="checkbox"]:h
   border: solid 1px var(--blueDk);
   box-shadow: 0 0 3px var(--blueDk);
 }
+@media only screen and (min-width: 600px) {
+  fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5em;
+  }
+}
 
 /*To use the grid you need to add a container element. Inside the container, you can add rows to organize your columns. Use col-1 through col-12 to determine the width of the column*/
       
@@ -468,52 +475,41 @@ input:focus, textarea:focus, input[type="radio"]:hover, input[type="checkbox"]:h
 * format to make: div.modal>button.modalBtn[onclick="openPopup()"]+div#popup.popup>button[onclick="closePopup()"]
 */
 .modal {
-    width:100%;
-    height:100vh;  
-    background-color: #555;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .modalBtn{
-    padding:.5rem 3rem;
-    cursor:pointer;
-    border-radius: .75rem;
-  }
-  .popup{
-    width:275px;
-    background: #fff;
-    border-radius: 1rem;
-    position:absolute;
-    top:0;
-    left:50%;
-    transform: translate(-50%,-50%) scale(.1);
-    text-align: center;
-    padding: 0 2rem 2rem;
-    color:#333;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-  }
-  .open-popup{
-    visibility: visible;
-    top:50%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  .popup h2{
-    margin: 2rem 0 1rem;
-  }
-   .popup button{
-    width:50%;
-    margin-top: .5rem;
-    border-radius: 2rem;
-    cursor:pointer;
-    box-shadow: 0 5px 5px #aaa;
-  }
-
-  @media screen and (min-width: 600px){
-    .popup {
-      width: 400px; }
-  }
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+.popup {
+  width: 275px;
+  background: var(--primaryLt);
+  border-radius: 1rem;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  height: 400px;
+  transform: translate(-50%, -50%) scale(.1);
+  text-align: center;
+  padding: 0 2rem 2rem;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup .popup {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 15;
+}
+.open-popup, .open-popup .popup {
+  visibility: visible;
+}
+@media screen and (min-width: 600px){
+  .popup {
+    width: 400px; }
+}
 
 /*food icons*/
 @font-face {

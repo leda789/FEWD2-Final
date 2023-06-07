@@ -16,12 +16,12 @@ closeBtn.addEventListener('click',() => {
 /************
  * MODAL *
  ************/
-let popup = document.getElementById('popup');
+const modal = document.querySelector('.modal');
 function openPopup(){
-    popup.classList.add('open-popup');
+    modal.classList.add('open-popup');
 }
 function closePopup(){
-    popup.classList.remove('open-popup');
+    modal.classList.remove('open-popup');
 }
 /************
  * CAROUSEL *
