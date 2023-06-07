@@ -134,6 +134,21 @@ dotsNav.addEventListener('click', e => {
   pauseCarousel();
 })
 }
+function debounce(func, delay) {
+  let timerId;
+  return function() {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timerId);
+    timerId = setTimeout(function() {
+      func.apply(context, args);
+    }, delay)
+  }
+}
+
+window.addEventListener('resize', debounce(function() {
+  location.reload();
+}, 250)); 
 
 /************
  *ORDER  APP*
@@ -172,4 +187,14 @@ function completeOrder(e) {
   costTotal /= 100;
   costTotal = costTotal.toFixed(2);
   costTotal = '$' + costTotal;
+  
+  const orderPopup = document.querySelector('#orderPopup');
+  const orderSummary = document.querySelector('#orderSummary');
+  console.log(orderSummary);
+  order.forEach(order => { 
+    let node = document.createElement("li");
+    let textNode = document.createTextNode(document.querySelector('label[for="' + order +'"]').firstElementChild.textContent);
+    node.appendChild(textNode);
+    orderSummary.appendChild(node);
+  })
 }

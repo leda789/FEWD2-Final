@@ -6,7 +6,7 @@
   font-weight: 500;
 }
 .cardDeck {
-  padding: 2em;
+  padding: 2em 2em 5em;
   gap: 1em;
 }
 .cardDeck h2 {
@@ -42,6 +42,9 @@ header img {
 .hero button:hover {
   background-color: var(--blueLt);
   border-color: var(--blueDk);
+}
+.websiteLinks h2{
+  padding: 2em 0;
 }
 
 @media screen and (min-width: 1200px) {

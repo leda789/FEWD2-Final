@@ -1,72 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Nuggets</title>
+  <title>R's Breakfast</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="css/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="css/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="css/icons/favicon-16x16.png">
-  <link rel="manifest" href="css/icons/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/nuggets.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/nuggets.css">
+  <link rel="stylesheet" href="css/rsBreakfast.css">
+  
 </head>
 
 <body>
-<nav class="navbar">
+<nav class="navbar yellowDark">
   <i class="fa-solid fa-bars menuIcon"></i>
   <div class="logo">
-    <a href="#">Nuggets</a>
+    <a href="#">R's Breakfast</a>
   </div>
   <div class="navLinks">
     <i class="fa-solid fa-xmark closeIcon"></i>
     <ul class="links">
       <li>
-        <a href="#">CSS</a>
+        <a href="#">Menu</a>
       </li>
       <li>
-        <a href="#">JS <i class="fa-solid fa-caret-down arrowIcon"></i></a>
-        <ul class="subMenu">
-          <li><a href="#">Carousel</a></li>
-          <li><a href="#">Ordering</a></li>
-        </ul>
+        <a href="#">Hiring</a>
       </li>
       <li>
-        <a href="#">Helpers</a>
+        <a href="#">Daily Specials</a>
       </li>
       <li>
-        <a href="#">Icons</a>
+        <a href="#">Events</a>
       </li>
     </ul>
   </div>
 </nav>
 
+<main class="dark">
+<h1 class="center textCenter pageTitle">Order Here</h1>
 
-<form action="" method="get">
-  <label for="chickenParmesan">
-    <span class="itemName">Chicken Parmesan </span><span class="itemPrice">17.50</span>
-    <input type="button" class="addItemButton" id="chickenParmesan" value="+ Add">
+<section class="carousel">
+  <button class="carouselLeftBtn isHidden">
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
+  <div class="carouselContainer">
+    <ul class="carouselItems">
+      <li class="carouselSlide currentSlide">
+        <img src="../../images/avoToast.jpg" alt="avocado toast" class="center">
+      </li>
+      <li class="carouselSlide">
+        <img src="../../images/benedict.jpg" alt="eggs benedict" class="center">
+      </li>
+      <li class="carouselSlide">
+        <img src="../../images/latte.jpg" alt="a latte" class="center">
+      </li>
+      <li class="carouselSlide">
+        <img src="../../images/lobster.jpg" alt="a meal of lobster" class="center">
+      </li>
+      <li class="carouselSlide">
+        <img src="../../images/pancake.jpg" alt="a singular pancake" class="center">
+      </li>
+    </ul>
+  </div>
+  <button class="carouselRightBtn">
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+  <nav class="carouselNav">
+    <button class="carouselIndicator currentSlide"></button>
+    <button class="carouselIndicator"></button>
+    <button class="carouselIndicator"></button>
+    <button class="carouselIndicator"></button>
+    <button class="carouselIndicator"></button>
+  </nav>
+</section>
+
+<form action="" method="get" class="blueDark">
+  <label for="eggsBenedict">
+    <span class="itemName">Eggs Benedict </span><span class="itemPrice">22.68</span>
+    <input type="button" class="addItemButton" id="eggsBenedict" value="+ Add">
   </label>
-  <label for="eggplantParmesan">
-    <span class="itemName">Eggplant Parmesan </span><span class="itemPrice">15.50</span>
-    <input type="button" class="addItemButton" id="eggplantParmesan" value="+ Add">
+  <label for="morningLobster">
+    <span class="itemName">Morning Lobster <i class="iconShellfish"></i></span><span class="itemPrice">35.92</span>
+    <input type="button" class="addItemButton" id="morningLobster" value="+ Add">
+  </label>
+  <label for="machakaBurrito">
+    <span class="itemName">Machaka Burrito <i class="iconSpicy"></i></span><span class="itemPrice">25.50</span>
+    <input type="button" class="addItemButton" id="machakaBurrito" value="+ Add">
+  </label>
+  <label for="largePancake">
+    <span class="itemName">One Large Pancake </span><span class="itemPrice">18.00</span>
+    <input type="button" class="addItemButton" id="largePancake" value="+ Add">
+  </label>
+  <label for="nyBagel">
+    <span class="itemName">New York Bagel <i class="iconFavorite"></i></span><span class="itemPrice">19.45</span>
+    <input type="button" class="addItemButton" id="nyBagel" value="+ Add">
+  </label>
+  <label for="morningLobster">
+    <span class="itemName">Avocado Toast <i class="iconVegan"></i></span><span class="itemPrice">172.99</span>
+    <input type="button" class="addItemButton" id="morningLobster" value="+ Add">
+  </label>
+  <label for="coffee">
+    <span class="itemName">Coffee </span><span class="itemPrice">2.50</span>
+    <input type="button" class="addItemButton" id="coffee" value="+ Add">
+  </label>
+  <label for="latte">
+    <span class="itemName">~Coffee~ <i class="iconDairy"></i></span><span class="itemPrice">6.25</span>
+    <input type="button" class="addItemButton" id="latte" value="+ Add">
   </label>
 
-  <input onclick="openPopup()" id="orderUp" type="submit" value="Get it started!">
+  <input onclick="openPopup()" id="orderUp" type="submit" value="Submit Order">
   <div class="modal">
     <div class="popup" id="popup">
-      <p>i hope this works</p>
+      <section id="orderPopup">
+        <p>Your order:</p>
+          <ul id="orderSummary">
+          
+          </ul>
+        <p>Your total is: </p>
+      </section>
       <button type="button" onclick="closePopup()">Continue to Payment</button>
     </div>
   </div>
 </form>
+</main>
 
-<script src="scripts/script.js"></script>
+<script src="../../scripts/script.js"></script>
 </body>
 </html>
