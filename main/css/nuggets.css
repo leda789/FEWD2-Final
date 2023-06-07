@@ -17,10 +17,10 @@
   --primaryLt: #E8F1F7;
   --primaryLt2: #fff2e5;
 }
+html { scroll-behavior: smooth; }
 body {
   font: 16px 'outfit', sans-serif;
 }
-
 /*generic styling*/
 abbr {
   text-decoration: underline dotted;
@@ -154,6 +154,53 @@ nav.navbar .navLinks .links { margin-top: 1.5rem; }
   nav.navbar .links li a {
     padding: 0 1.75em;
   }
+}
+
+/*form styling*/
+form{
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  border: 1px solid var(--primaryDk);
+  padding: 1.5rem;
+  margin: 0 auto;
+  height: min(100vh, 50%);
+
+}
+fieldset{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+input,
+textarea {
+  background-color: var(--primaryLt);
+  border-radius: .17rem;
+  border: 1px solid var(--primaryDkr); 
+  color: var(--primaryDk);
+}
+label { display: block; }
+
+input[type="radio"], input[type="checkbox"] {
+  -webkit-appearance: none;
+  background-color: var(--primaryLt);
+  padding: .5em;
+}
+input[type="radio"] {
+  border-radius: 50%;
+}
+input[type="radio"]:checked { 
+  background-color: #555;
+  background-image: radial-gradient( var(--primaryDk) 30%, white 30%);
+}
+input[type="checkbox"]:checked {
+  background-color: #555;
+  background-image: linear-gradient(to top right, transparent 45%, var(--primaryDk) 45%, var(--primaryDk) 55%, transparent 55%),
+                    linear-gradient(to top left, white 45%, var(--primaryDk) 45%, var(--primaryDk) 55%, white 55%);
+}
+input:focus, textarea:focus, input[type="radio"]:hover, input[type="checkbox"]:hover, input[type="radio"]:checked, input[type="checkbox"]:checked {
+  outline: solid 1px var(--blueDk);
+  border: solid 1px var(--blueDk);
+  box-shadow: 0 0 3px var(--blueDk);
 }
 
 /*To use the grid you need to add a container element. Inside the container, you can add rows to organize your columns. Use col-1 through col-12 to determine the width of the column*/
@@ -558,14 +605,15 @@ add up all prices and checkout
   border-radius: 1rem;
   padding: .5em 1em;
 }
-.addItemButton::before {
-  content: '+ Add';
-}
+
 .itemName {
     
 }
 .itemPrice {
-  text-align: left;
+  text-align: right;
+}
+.itemPrice::before {
+  content: "$";
 }
 
 /*tables*/
