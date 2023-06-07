@@ -1,0 +1,60 @@
+button.orange.transition {
+  background-color: var(--orangeLt);
+  border-style:solid;
+  border-width: 1.5px;
+  border-color: var(--greenLt);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+p.center {
+  color: var(--primaryLt);
+  margin-top: 15px;
+}
+section.blueDark.container.cardDeck {
+  margin-top: 10px;
+  background-color: var(--primaryDk);  
+}
+.card {
+  background-color: var(--greenDk);
+  width: 50px;
+  height: 100px;
+  padding: 200px;
+  margin-top: 10px;
+  
+}
+article.card.center.leftSide{
+  ;
+}
+img.center {
+  background-color: var(--orangeLt);
+}
+table.menu-table {
+  display:inline-block;
+  justify-content:center;
+  align-items: center;
+    
+}
+div.menu-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.aboutUs {
+  text-align: justify;
+  margin: 50px;
+  line-height: 35px;
+}
+.center.textCenter.statement{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  word-spacing: 8px;
+  font-size: larger;
+  color: var(--orangeDk);
+}

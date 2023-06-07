@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Main Squeeze</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="css/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="css/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="css/icons/favicon-16x16.png">
+    <link rel="manifest" href="css/icons/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/nuggets.css">
+    <link rel="stylesheet" href="css/MS.css">
+
+    <title>Main Squeeze Cafe</title>
+</head>
+<body>
+    <nav class="navbar">
+        <i class="fa-solid fa-bars menuIcon"></i>
+        <div class="logo">
+          <a href="MS.html">Main Squeeze</a>
+        </div>
+        <div class="navLinks">
+          <i class="fa-solid fa-xmark closeIcon"></i>
+          <ul class="links">
+            <li>
+              <a href="about.html">about</a>
+            </li>
+            <li>
+              <a href="menu.html">menu <i class="fa-solid fa-caret-down arrowIcon"></i></a>
+              <ul class="subMenu">
+                <li><a href="about.html">smoothies</a></li>
+                <li><a href="menu.html">ordering</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="contact.html">contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <header class="orange textCenter">
+       <img src="../../images/MAIN SQUEEZE.png" alt="smoothie cup logo" class="center"> 
+        <hgroup>
+          <h1 class="uppercase">SMOOTHIE CAFE</h1>
+          <p>San Diego, CA</p>
+        </hgroup>
+      </header>
+      <img src="../../images/smoothie cafe.jpg" alt="smoothies on a table at a cafe">
+
+      <div class="carousel">
+        <button class="carouselLeftBtn"><i class="fa fa-chevron-left"></i></button>
+        <div class="carouselContainer">
+          <ul class="carouselItems">
+            <li class="carouselSlide">
+              <img src="../../images/apple smoothie.jpg" alt="Image 1">
+            </li>
+            <li class="carouselSlide">
+              <img src="../../images/granola bowl.jpg" alt="Image 2">
+            </li>
+            <li class="carouselSlide">
+              <img src="../../images/smoothies to go.jpg" alt="Image 3">
+            </li>
+          </ul>
+        </div>
+        <button class="carouselRightBtn"><i class="fa fa-chevron-right"></i></button>
+        <nav class="carouselNav">
+          <button class="carouselIndicator"></button>
+          <button class="carouselIndicator"></button>
+          <button class="carouselIndicator"></button>
+        </nav>
+      </div>
+
+      
+      <main>
+        <section class="hero textCenter dark">
+          <h2>Always Fresh</h2>
+          <p class="center">Order ahead to pick up at a locaiton near you!</p>
+          <button class="orange transition" onclick="window.location.href='menu.html'">CLICK TO ORDER</button>
+
+        </section>
+        
+        <section class="blueDark container cardDeck">
+          <h2 class="col-12 textCenter">Popular Selections</h2>
+          <div class="col-6">
+            <article class="card center leftSide">
+            <a href="menu.html">
+              <img src="image/apple smoothie.jpg" alt="green apple smoothie">
+              <p>Green Apple</p>
+              <i class="fa-solid fa-circle-arrow-up downRight"></i>
+            </a>
+            </article>
+          </div>
+          <div class="col-6">
+          <article class="card center rightSide">
+            <a href="menu.html">
+              <img src="image/granola bowl.jpg" alt="granola">
+              <p>Granola Bowl</p>
+              <i class="fa-solid fa-circle-arrow-up downRight"></i>
+            </a>
+          </article></div>
+          <div class="col-12"><p class="center textCenter statement">Come enjoy a healthy and refreshing treat this summer!.</p></div>
+          <div class="col-6">
+            <article class="card center leftSide">
+            <a href="menu.html">
+            <img src="image/smoothies to go.jpg" alt="#">
+            <p>More Flavors</p>
+            <i class="fa-solid fa-circle-arrow-up downRight"></i>
+            </a>
+          </article>
+          </div>
+          <div class="col-6">
+            <article class="card center rightSide">
+            <img src="image/fruit bowl.jpg" alt="fruit in a bowl">
+            <a href="menu.html">  
+              <p>Fruit Bowl</p>
+              <i class="fa-solid fa-circle-arrow-up downRight"></i>
+            </a>
+          </article>
+          </div>
+        </section>
+      </main>
+      
+    <script src="scripts/script.js"></script>
+</body>
+</html>
