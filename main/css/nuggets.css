@@ -119,6 +119,7 @@ th, td {
    top: 0;
    left: 2rem;
    box-shadow: none;
+   background-color: var(--primaryDkr);
  }
 
 @media screen and (min-width: 600px) {
@@ -143,7 +144,6 @@ th, td {
     position: absolute;
     top: 72px;
     left: 0;
-    background-color: inherit;
     display: none;
     z-index: 2;
   }
@@ -586,31 +586,11 @@ i[class^="icon"]{
 }
 
 /*food price application*/
-/*
-how to format html for collecting info?
-create class for adding buttons
-add event listener to all buttons with class
-button checks name of food and adds it
-button checks price of food and adds it
-perhaps in name/property pair?
-when at checkout, retreive all pairs and list them
-add up all prices and checkout
-*/
 
-.addItemContainer {
-  
-}
 .addItemButton {
   border-radius: 1rem;
   padding: .5em 1em;
-}
-
-.itemName {
-    
-}
-.itemPrice {
-  text-align: right;
-}
+} 
 .itemPrice::before {
   content: "$";
 }
