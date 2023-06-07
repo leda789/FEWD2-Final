@@ -116,13 +116,13 @@
   <div class="modal">
     <div class="popup" id="popup">
       <section id="orderPopup">
-        <p>Your order:</p>
-          <ul id="orderSummary">
+        <h3>Your order:</h3>
+          <ul id="orderSummary" class="listNoStyle textRight">
           
           </ul>
-        <p>Your total is: </p>
+        <p id="orderTotal">Your total is </p>
       </section>
-      <button type="button" onclick="closePopup()">Continue to Payment</button>
+      <button type="button" onclick="closePopup()" class="closeModal">Continue to Payment</button>
     </div>
   </div>
 </form>

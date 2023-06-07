@@ -179,6 +179,7 @@ orderUp.addEventListener('click', completeOrder);
 
 function completeOrder(e) {
   e.preventDefault();
+  const orderTotal = document.querySelector('#orderTotal');
   let costTotal = 0;
   totalPrice.forEach(cost => {
     cost *= 100; //multiply to prevent floating point errors
@@ -187,10 +188,10 @@ function completeOrder(e) {
   costTotal /= 100;
   costTotal = costTotal.toFixed(2);
   costTotal = '$' + costTotal;
+  orderTotal.textContent += costTotal
   
   const orderPopup = document.querySelector('#orderPopup');
   const orderSummary = document.querySelector('#orderSummary');
-  console.log(orderSummary);
   order.forEach(order => { 
     let node = document.createElement("li");
     let textNode = document.createTextNode(document.querySelector('label[for="' + order +'"]').firstElementChild.textContent);
