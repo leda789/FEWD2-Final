@@ -103,8 +103,17 @@
   </section>
 </main>
 
-<form>
-  <label><span class="product">Chicken Parmeasean</span><span class="cost">$17.50</span></label>
+<form action="" method="get">
+  <label for="chickenParmesan">
+    <span class="itemName">Chicken Parmesan </span><span class="itemPrice">17.50</span>
+    <input type="button" class="addItemButton" id="chickenParmesan" value="+ Add">
+  </label>
+  <label for="eggplantParmesan">
+    <span class="itemName">Eggplant Parmesan </span><span class="itemPrice">15.50</span>
+    <input type="button" class="addItemButton" id="eggplantParmesan" value="+ Add">
+  </label>
+  
+  <input id="orderUp" type="submit" value="Get it started!">
 </form>
   
 <section class="order" id="order">

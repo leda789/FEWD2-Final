@@ -17,10 +17,10 @@
   --primaryLt: #E8F1F7;
   --primaryLt2: #fff2e5;
 }
+html { scroll-behavior: smooth; }
 body {
   font: 16px 'outfit', sans-serif;
 }
-
 /*generic styling*/
 abbr {
   text-decoration: underline dotted;
@@ -558,14 +558,15 @@ add up all prices and checkout
   border-radius: 1rem;
   padding: .5em 1em;
 }
-.addItemButton::before {
-  content: '+ Add';
-}
+
 .itemName {
     
 }
 .itemPrice {
-  text-align: left;
+  text-align: right;
+}
+.itemPrice::before {
+  content: "$";
 }
 
 /*tables*/
